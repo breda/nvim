@@ -22,6 +22,10 @@ return require('packer').startup(function(use)
   -- Fugitive
   use ('tpope/vim-fugitive')
 
+  -- NerdTree
+  use ('preservim/nerdtree')
+  use ('ryanoasis/vim-devicons')
+
   -- LSP setup: https://github.com/VonHeikemen/lsp-zero.nvim
   use {
   'VonHeikemen/lsp-zero.nvim',
