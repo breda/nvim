@@ -23,6 +23,13 @@ return require('packer').startup(function(use)
 	-- Treesitter
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
+    -- Autoclose & auto-indent
+    use 'm4xshen/autoclose.nvim'
+    use 'nmac427/guess-indent.nvim'
+
+    -- Annotations
+    use ("danymat/neogen")
+
 	-- Undotree
 	use ('mbbill/undotree')
 
@@ -40,7 +47,6 @@ return require('packer').startup(function(use)
 	-- NerdTree
 	use ('preservim/nerdtree')
     use ('ryanoasis/vim-devicons')
-    
 
 	-- PHP dev 
 	use ('phpactor/phpactor')
@@ -48,6 +54,7 @@ return require('packer').startup(function(use)
 	-- Misc
 	use ('mhinz/vim-startify')
     use ('karb94/neoscroll.nvim')
+    use ("folke/twilight.nvim")
 	use({
 		"folke/noice.nvim",
 		requires = {
@@ -55,6 +62,7 @@ return require('packer').startup(function(use)
 			"rcarriga/nvim-notify",
 		}
 	})
+
 
 	-- LSP setup: https://github.com/VonHeikemen/lsp-zero.nvim
 	use {

@@ -18,6 +18,9 @@ vim.keymap.set('n', '<leader>bp', function()
     require("harpoon.ui").nav_prev()
 end)
 
+-- Annotations (docblocks... etc.)
+vim.keymap.set("n", "<leader>ca", function() require('neogen').generate() end);
+
 -- NerdTree
 vim.keymap.set("n", "<leader>fl", vim.cmd.NERDTreeFocus)
 vim.keymap.set("n", "<leader>ft", vim.cmd.NERDTreeToggle)
@@ -52,6 +55,8 @@ vim.keymap.set("n", "<leader>bc-", function()  require("nvim-smartbufs").close_b
 vim.keymap.set("n", "<leader>bcè", function()  require("nvim-smartbufs").close_buffer(7) end)
 vim.keymap.set("n", "<leader>bc_", function()  require("nvim-smartbufs").close_buffer(8) end)
 vim.keymap.set("n", "<leader>bcç", function()  require("nvim-smartbufs").close_buffer(9) end)
+vim.keymap.set("n", "<leader>qq", function()  require("nvim-smartbufs").close_current_buffer() end)
+
 
 -- PHP
 vim.keymap.set("n", "<leader>pd", vim.cmd.PhpactorCopyFile)

@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["autoclose.nvim"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
+    url = "https://github.com/m4xshen/autoclose.nvim"
+  },
   catppuccin = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/memento.nvim",
     url = "https://github.com/gaborvecsei/memento.nvim"
+  },
+  neogen = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/neogen",
+    url = "https://github.com/danymat/neogen"
   },
   ["neoscroll.nvim"] = {
     loaded = true,
@@ -224,6 +234,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
     url = "https://github.com/Pocco81/true-zen.nvim"
+  },
+  ["twilight.nvim"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/twilight.nvim",
+    url = "https://github.com/folke/twilight.nvim"
   },
   undotree = {
     loaded = true,
