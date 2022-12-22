@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["goyo.vim"] = {
-    loaded = true,
-    path = "/home/redb/.local/share/nvim/site/pack/packer/start/goyo.vim",
-    url = "https://github.com/junegunn/goyo.vim"
-  },
   harpoon = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -143,6 +138,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["memento.nvim"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/memento.nvim",
+    url = "https://github.com/gaborvecsei/memento.nvim"
+  },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
   },
   nerdtree = {
     loaded = true,
@@ -174,6 +179,11 @@ _G.packer_plugins = {
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/nvim-notify",
     url = "https://github.com/rcarriga/nvim-notify"
   },
+  ["nvim-smartbufs"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/nvim-smartbufs",
+    url = "https://github.com/johann2357/nvim-smartbufs"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -200,10 +210,20 @@ _G.packer_plugins = {
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["soda.vim"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/soda.vim",
+    url = "https://github.com/DAddYE/soda.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["true-zen.nvim"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
+    url = "https://github.com/Pocco81/true-zen.nvim"
   },
   undotree = {
     loaded = true,

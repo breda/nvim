@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
 
 	-- Colorscheme
 	use { "catppuccin/nvim", as = "catppuccin" }
+    use ('DAddYE/soda.vim')
 
 	-- Status bar 
 	use {
@@ -29,20 +30,24 @@ return require('packer').startup(function(use)
 	use ('tpope/vim-fugitive')
 
 	-- Distraction free
-	use ('junegunn/goyo.vim')
+	use ("Pocco81/true-zen.nvim")
 
 	-- Harpoon to qiuck switch
 	use ('ThePrimeagen/harpoon')
+    use ('gaborvecsei/memento.nvim')
+    use ('johann2357/nvim-smartbufs')
 
 	-- NerdTree
 	use ('preservim/nerdtree')
-	use ('ryanoasis/vim-devicons')
+    use ('ryanoasis/vim-devicons')
+    
 
 	-- PHP dev 
 	use ('phpactor/phpactor')
 
 	-- Misc
 	use ('mhinz/vim-startify')
+    use ('karb94/neoscroll.nvim')
 	use({
 		"folke/noice.nvim",
 		requires = {
