@@ -5,16 +5,27 @@ vim.g.mapleader = " "
 -- See: telescope.lua
 -- See: harpoon.lua
 
+-- Splits
+vim.keymap.set('n', '<leader>s\"',vim.cmd.FocusSplitDown)
+vim.keymap.set('n', '<leader>s%', vim.cmd.FocusSplitLeft)
+vim.keymap.set('n', '<leader>l', "<C-w>l")
+vim.keymap.set('n', '<leader>h', "<C-w>h")
+vim.keymap.set('n', '<leader>j', "<C-w>j")
+vim.keymap.set('n', '<leader>k', "<C-w>k")
+vim.keymap.set('n', '<leader>se', vim.cmd.FocusEqualise)
+vim.keymap.set('n', '<leader>sz', vim.cmd.FocusMaximise)
+
+
 -- Buffer mappings
-vim.keymap.set('n', '<leader>bm', function() 
+vim.keymap.set('n', '<leader>bm', function()
     require("harpoon.mark").add_file()
 end)
 
-vim.keymap.set('n', '<leader>bn', function() 
+vim.keymap.set('n', '<leader>bn', function()
     require("harpoon.ui").nav_next()
 end)
 
-vim.keymap.set('n', '<leader>bp', function() 
+vim.keymap.set('n', '<leader>bp', function()
     require("harpoon.ui").nav_prev()
 end)
 
@@ -30,7 +41,7 @@ vim.keymap.set("n", "<leader>ff", vim.cmd.NERDTreeFind)
 --vim.keymap.set("n", "<leader>nf", vim.cmd.NERDTreeFocus)
 vim.keymap.set("n", "<leader>nn", vim.cmd.NERDTreeToggle)
 vim.keymap.set("n", "<leader>nf", vim.cmd.NERDTreeFind)
-vim.keymap.set("n", "<A-S-o>", function() 
+vim.keymap.set("n", "<A-S-o>", function()
     require("memento").toggle()
 end)
 
@@ -69,13 +80,16 @@ vim.keymap.set("n", "<leader>pe", vim.cmd.PhpactorClassExpand)
 vim.keymap.set("n", "<leader>pp", vim.cmd.PhpactorContextMenu)
 vim.keymap.set("n", "<leader>pc", vim.cmd.PhpDocPasteComment)
 
+-- Go
+vim.keymap.set("n", "<leader>gt", vim.cmd.GoAddTag)
+
+
 -- Misc
-vim.keymap.set("n", "<leader>z", vim.cmd.TZFocus)
-vim.keymap.set("n", "<leader>md", vim.cmd.TZAtaraxis)
+vim.keymap.set("n", "<leader>md", vim.cmd.ZenMode)
 
 -- Update colorscheme to something bright. 
 -- In order to revert it back to the original in colors.lua you need to restart
-vim.keymap.set("n", "<leader>mcl", function() 
+vim.keymap.set("n", "<leader>mcl", function()
     vim.cmd[[colorscheme soda]]
 end)
 

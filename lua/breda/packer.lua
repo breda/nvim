@@ -37,7 +37,7 @@ return require('packer').startup(function(use)
 	use ('tpope/vim-fugitive')
 
 	-- Distraction free
-	use ("Pocco81/true-zen.nvim")
+	use ('folke/zen-mode.nvim')
 
 	-- Harpoon to qiuck switch
 	use ('ThePrimeagen/harpoon')
@@ -48,8 +48,14 @@ return require('packer').startup(function(use)
 	use ('preservim/nerdtree')
     use ('ryanoasis/vim-devicons')
 
+	-- Splits 
+	use ('beauwilliams/focus.nvim')
+
 	-- PHP dev 
 	use ('phpactor/phpactor')
+
+	-- Go dev
+	use ('ray-x/go.nvim')
 
 	-- Misc
 	use ('mhinz/vim-startify')

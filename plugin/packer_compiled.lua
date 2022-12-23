@@ -114,10 +114,20 @@ _G.packer_plugins = {
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["focus.nvim"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/focus.nvim",
+    url = "https://github.com/beauwilliams/focus.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
   },
   ["guess-indent.nvim"] = {
     loaded = true,
@@ -235,11 +245,6 @@ _G.packer_plugins = {
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["true-zen.nvim"] = {
-    loaded = true,
-    path = "/home/redb/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
-    url = "https://github.com/Pocco81/true-zen.nvim"
-  },
   ["twilight.nvim"] = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/twilight.nvim",
@@ -269,6 +274,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/vim-startify",
     url = "https://github.com/mhinz/vim-startify"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
