@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["guess-indent.nvim"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/guess-indent.nvim",
+    url = "https://github.com/nmac427/guess-indent.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -244,6 +249,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/redb/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/redb/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-devicons"] = {
     loaded = true,
