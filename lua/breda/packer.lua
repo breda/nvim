@@ -96,4 +96,8 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	}
+
+	-- LSP utils
+	use ('onsails/lspkind.nvim')
+	use ('folke/trouble.nvim')
 end)

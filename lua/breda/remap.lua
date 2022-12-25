@@ -1,11 +1,23 @@
--- Leader
+------------------------------------------
+-------------- Leader --------------------
+------------------------------------------
 vim.g.mapleader = " "
 
--- Search & find
--- See: telescope.lua
--- See: harpoon.lua
+--------------------------------------
+------- Search & Find ----------------
+--------------------------------------
+local telescope = require('telescope.builtin')
 
--- Splits
+vim.keymap.set('n', '<A-p>', telescope.find_files, {})
+vim.keymap.set('n', '<leader>sf', telescope.git_files, {})
+vim.keymap.set('n', '<leader>ss', function()
+	telescope.grep_string({ search = vim.fn.input("Grep: ") })
+end)
+
+--------------------------------------
+------ Splits & Windows
+--------------------------------------
+
 vim.keymap.set('n', '<leader>s\"',vim.cmd.FocusSplitDown)
 vim.keymap.set('n', '<leader>s%', vim.cmd.FocusSplitLeft)
 vim.keymap.set('n', '<leader>l', "<C-w>l")
@@ -15,37 +27,14 @@ vim.keymap.set('n', '<leader>k', "<C-w>k")
 vim.keymap.set('n', '<leader>se', vim.cmd.FocusEqualise)
 vim.keymap.set('n', '<leader>sz', vim.cmd.FocusMaximise)
 
+--------------------------------------
+------- Buffers ----------------------
+--------------------------------------
 
--- Buffer mappings
-vim.keymap.set('n', '<leader>bm', function()
-    require("harpoon.mark").add_file()
-end)
+-- Switch to alternate file (previous one)
+vim.keymap.set("n", "!!", "<C-6>")
 
-vim.keymap.set('n', '<leader>bn', function()
-    require("harpoon.ui").nav_next()
-end)
-
-vim.keymap.set('n', '<leader>bp', function()
-    require("harpoon.ui").nav_prev()
-end)
-
--- Annotations (docblocks... etc.)
-vim.keymap.set("n", "<leader>ca", function() require('neogen').generate() end);
-
--- NerdTree
-vim.keymap.set("n", "<leader>fl", vim.cmd.NERDTreeFocus)
-vim.keymap.set("n", "<leader>ft", vim.cmd.NERDTreeToggle)
-vim.keymap.set("n", "<leader>ff", vim.cmd.NERDTreeFind)
-
--- Navigation (NerdTree)
---vim.keymap.set("n", "<leader>nf", vim.cmd.NERDTreeFocus)
-vim.keymap.set("n", "<leader>nn", vim.cmd.NERDTreeToggle)
-vim.keymap.set("n", "<leader>nf", vim.cmd.NERDTreeFind)
-vim.keymap.set("n", "<A-S-o>", function()
-    require("memento").toggle()
-end)
-
--- Siwtch between buffers with the numbers line
+-- Use leader+number to switch between buffers
 vim.keymap.set("n", "<leader>&", function()  require("nvim-smartbufs").goto_buffer(1) end)
 vim.keymap.set("n", "<leader>é", function()  require("nvim-smartbufs").goto_buffer(2) end)
 vim.keymap.set("n", "<leader>\"", function()  require("nvim-smartbufs").goto_buffer(3) end)
@@ -68,8 +57,21 @@ vim.keymap.set("n", "<leader>bc_", function()  require("nvim-smartbufs").close_b
 vim.keymap.set("n", "<leader>bcç", function()  require("nvim-smartbufs").close_buffer(9) end)
 vim.keymap.set("n", "<leader>qq", function()  require("nvim-smartbufs").close_current_buffer() end)
 
+vim.keymap.set('n', '<leader>bm', function()
+    require("harpoon.mark").add_file()
+end)
 
--- PHP
+vim.keymap.set('n', '<leader>bn', function()
+    require("harpoon.ui").nav_next()
+end)
+
+vim.keymap.set('n', '<leader>bp', function()
+    require("harpoon.ui").nav_prev()
+end)
+
+--------------------------------------
+--------------- PHP ------------------
+--------------------------------------
 vim.keymap.set("n", "<leader>pd", vim.cmd.PhpactorCopyFile)
 vim.keymap.set("n", "<leader>pm", vim.cmd.PhpactorMoveFile)
 vim.keymap.set("n", "<leader>pn", vim.cmd.PhpactorClassNew)
@@ -80,11 +82,29 @@ vim.keymap.set("n", "<leader>pe", vim.cmd.PhpactorClassExpand)
 vim.keymap.set("n", "<leader>pp", vim.cmd.PhpactorContextMenu)
 vim.keymap.set("n", "<leader>pc", vim.cmd.PhpDocPasteComment)
 
--- Go
+--------------------------------------
+-------------- Go --------------------
+--------------------------------------
 vim.keymap.set("n", "<leader>gt", vim.cmd.GoAddTag)
 
+--------------------------------------
+------- File Tree  -------------------
+--------------------------------------
+--vim.keymap.set("n", "<leader>nf", vim.cmd.NERDTreeFocus)
+vim.keymap.set("n", "<leader>nn", vim.cmd.NERDTreeToggle)
+vim.keymap.set("n", "<leader>nf", vim.cmd.NERDTreeFind)
+vim.keymap.set("n", "<A-S-o>", function()
+    require("memento").toggle()
+end)
 
--- Misc
+--------------------------------------
+-------------- Misc ------------------
+--------------------------------------
+
+-- Annotations
+vim.keymap.set("n", "<leader>ca", function() require('neogen').generate() end);
+
+-- Toggle zen mode
 vim.keymap.set("n", "<leader>md", vim.cmd.ZenMode)
 
 -- Update colorscheme to something bright. 
