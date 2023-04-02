@@ -15,6 +15,15 @@ vim.keymap.set('n', '<leader>ss', function()
 end)
 
 --------------------------------------
+------ Navigation
+--------------------------------------
+vim.keymap.set('n', 'm', 'l')
+vim.keymap.set('n', 'l', 'j')
+vim.keymap.set('n', 'k', 'h')
+vim.keymap.set('n', 'o', 'k')
+vim.keymap.set('n', '\'', '%')
+
+--------------------------------------
 ------ Splits & Windows
 --------------------------------------
 
@@ -90,7 +99,7 @@ vim.keymap.set("n", "<leader>gt", vim.cmd.GoAddTag)
 --------------------------------------
 ------- File Tree  -------------------
 --------------------------------------
---vim.keymap.set("n", "<leader>nf", vim.cmd.NERDTreeFocus)
+vim.keymap.set("n", "<leader>nf", vim.cmd.NERDTreeFocus)
 vim.keymap.set("n", "<leader>nn", vim.cmd.NERDTreeToggle)
 vim.keymap.set("n", "<leader>nf", vim.cmd.NERDTreeFind)
 vim.keymap.set("n", "<A-S-o>", function()
