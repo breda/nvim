@@ -1,12 +1,85 @@
-------------------------------------------
--------------- Leader --------------------
-------------------------------------------
+local telescope = require('telescope.builtin')
+
+-- leader
 vim.g.mapleader = " "
+
+----------------------------------------------------------
+------- FIND ---------------------------------------------
+----------------------------------------------------------
+
+-- Find all files
+vim.keymap.set('n', '<leader>fa', telescope.find_files, {})
+
+-- Find in git files
+vim.keymap.set('n', '<leader>ff', telescope.git_files, {})
+
+-- Find by grepping
+vim.keymap.set('n', '<leader>fg', function()
+	telescope.grep_string({ search = vim.fn.input("Grep: ") })
+end)
+
+-- Find symbol definition
+vim.keymap.set('n', '<leader>fd', vim.lsp.buf.definition)
+
+-- Find signature
+vim.keymap.set('n', '<leader>fs', vim.lsp.buf.signature_help)
+
+
+----------------------------------------------------------
+------- SHOW/HIDE ----------------------------------------
+----------------------------------------------------------
+
+-- Tree toggle
+vim.keymap.set('n', '<leader>tt', vim.cmd.NERDTreeToggle)
+
+-- Tree find
+vim.keymap.set('n', '<leader>tf', vim.cmd.NERDTreeFind)
+
+
+
+----------------------------------------------------------
+------- SPLITS -------------------------------------------
+----------------------------------------------------------
+
+-- Create splits
+vim.keymap.set('n', '<leader>s\"',vim.cmd.FocusSplitDown)
+vim.keymap.set('n', '<leader>s%', vim.cmd.FocusSplitLeft)
+
+-- Equalize & Maximize
+vim.keymap.set('n', '<leader>se', vim.cmd.FocusEqualise)
+vim.keymap.set('n', '<leader>sz', vim.cmd.FocusMaximise)
+
+
+
+----------------------------------------------------------
+------- BUFFERS ------------------------------------------
+----------------------------------------------------------
+
+-- Next buffer
+vim.keymap.set('n', '<C-Tab>', function()
+    require("harpoon.ui").nav_next()
+end)
+
+-- Prev buffer
+vim.keymap.set('n', '<C-S-Tab>', function()
+    require("harpoon.ui").nav_prev()
+end)
+
+
+
+
+----------------------------------------------------------
+------- RENAME -------------------------------------------
+----------------------------------------------------------
+
+-- Rename symbol
+vim.keymap.set('n', '<leader>rs', vim.lsp.buf.rename)
+
+
 
 --------------------------------------
 ------- Search & Find ----------------
 --------------------------------------
-local telescope = require('telescope.builtin')
 
 vim.keymap.set('n', '<A-p>', telescope.find_files, {})
 vim.keymap.set('n', '<leader>sf', telescope.git_files, {})

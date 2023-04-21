@@ -5,7 +5,6 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
     'phpactor',
-    'sumneko_lua',
     'gopls',
     'bashls',
     'dockerls',

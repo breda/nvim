@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = {"help", "lua", "bash", "go", "jsonc", "markdown", "php", "proto", "yaml"},
+  ensure_installed = {"help", "lua", "bash", "go", "jsonc", "php", "proto", "yaml", "python"},
 
   indent = {
     enable = true

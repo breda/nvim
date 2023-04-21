@@ -10,14 +10,24 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	-- Colorscheme
-	use { "catppuccin/nvim", as = "catppuccin" }
+	-- Colorschemes
+	--use { "catppuccin/nvim", as = "catppuccin" }
+	--use {'nyoom-engineering/oxocarbon.nvim'}
+	use ('marko-cerovac/material.nvim')
     use ('DAddYE/soda.vim')
 
 	-- Status bar 
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+
+	-- Dashboard
+	use {
+  		'glepnir/dashboard-nvim',
+		event = 'VimEnter',
+		config = function() require('breda/dashboard') end,
+  		requires = {'nvim-tree/nvim-web-devicons'}
 	}
 
 	-- Treesitter
@@ -39,9 +49,11 @@ return require('packer').startup(function(use)
 	-- Distraction free
 	use ('folke/zen-mode.nvim')
 
-	-- Harpoon to qiuck switch
+	-- Quick switch
 	use ('ThePrimeagen/harpoon')
     use ('gaborvecsei/memento.nvim')
+
+	-- Buffer management
     use ('johann2357/nvim-smartbufs')
 
 	-- NerdTree
@@ -58,7 +70,6 @@ return require('packer').startup(function(use)
 	use ('ray-x/go.nvim')
 
 	-- Misc
-	use ('mhinz/vim-startify')
     use ('karb94/neoscroll.nvim')
     use ("folke/twilight.nvim")
 	use({

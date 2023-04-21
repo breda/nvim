@@ -1,3 +1,7 @@
-require("breda.remap")
+-- Configs
 require("breda.set")
+
+-- Remaps
+require("breda.remap")
+
 
