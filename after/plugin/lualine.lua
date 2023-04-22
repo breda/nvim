@@ -36,11 +36,13 @@ require('lualine').setup {
     theme = bubbles_theme,
     icons_enabled = true,
     component_separators = '|',
-    section_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
   },
-  sections = {
+  sections = {},
+  inactive_sections = {},
+  tabline = {
     lualine_a = {
-      { 'mode', separator = { left = '' }, right_padding = 2 },
+      { 'mode', separator = { left = '' }, right_padding = 2 },
     },
     lualine_b = {'buffers'},
     lualine_c = {'fileformat'},
@@ -48,14 +50,5 @@ require('lualine').setup {
     lualine_y = {'branch', 'diff'},
     lualine_z = {'encoding', 'fileformat', 'location'},
   },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
   extensions = {}
 }
