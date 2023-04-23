@@ -5,6 +5,11 @@ require('dashboard').setup({
       "                                 ",
       "                                 ",
       "                                 ",
+      "                                 ",
+      "                                 ",
+      "                                 ",
+      "                                 ",
+      "                                 ",
       "           ▄ ▄                   ",
       "       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄     ",
       "       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █     ",
@@ -17,26 +22,45 @@ require('dashboard').setup({
       "                                 ",
       "                                 ",
       "                                 ",
+      "                                 ",
+      "                                 ",
+      "                                 ",
+      "                                 ",
+      "                                 ",
+      "                                 ",
     },
     center = {
       {
-        icon = ' ',
+        icon = ' ',
         icon_hl = 'Title',
         desc = 'Find File           ',
         desc_hl = 'String',
-        key = 'b',
-        keymap = 'SPC f f',
+        key = 'SPC f f',
+        keymap = '',
         key_hl = 'Number',
-        action = 'lua print(2)'
+        action = ''
       },
       {
-        icon = ' ',
-        desc = 'Find Dotfiles',
-        key = 'f',
-        keymap = 'SPC f d',
-        action = 'lua print(3)'
+        icon = ' ',
+        icon_hl = 'Title',
+        desc = 'Find Word           ',
+        desc_hl = 'String',
+        key = 'SPC f g',
+        keymap = '',
+        key_hl = 'Number',
+        action = ''
+      },
+      {
+        icon = ' ',
+        icon_hl = 'Title',
+        desc = 'Toggle Tree           ',
+        desc_hl = 'String',
+        key = 'SPC t t',
+        keymap = '',
+        key_hl = 'Number',
+        action = ''
       },
     },
-    footer = {}  --your footer
+    footer = {}
   }
 })

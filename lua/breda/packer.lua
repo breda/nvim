@@ -30,6 +30,9 @@ return require('packer').startup(function(use)
   		requires = {'nvim-tree/nvim-web-devicons'}
 	}
 
+	-- Motion
+	use 'fedepujol/move.nvim'
+
 	-- Treesitter
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
