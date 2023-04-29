@@ -1,10 +1,17 @@
--- Configs
-require("breda.set")
+-- Config
+require("breda.config")
 
--- Remaps
-require("breda.remap")
+-- Mappings
+require("breda.mappings")
+
+-- Experimental: change keys to a keymap
+local mappings = require('breda.keymap')
+local keymap = vim.keymap
+
+for _, mapping in pairs(mappings) do
+    keymap.set(mapping.modes, mapping.keys, mapping.run)
+end
 
 -- Plugin specific config
-require('breda.config')
-
+require('breda.plugins')
 

@@ -1,25 +1,23 @@
 local telescope = require('telescope.builtin')
 
--- leader
-vim.g.mapleader = " "
 
 ----------------------------------------------------------
 ------- FIND ---------------------------------------------
 ----------------------------------------------------------
 
 -- Find all files
-vim.keymap.set('n', '<leader>fa', telescope.find_files, {})
+-- vim.keymap.set('n', '<leader>fa', telescope.find_files, {})
 
 -- Find in git files
-vim.keymap.set('n', '<leader>ff', telescope.git_files, {})
+-- vim.keymap.set('n', '<leader>ff', telescope.git_files, {})
 
 -- Find by grepping
-vim.keymap.set('n', '<leader>fg', function()
-	telescope.grep_string({ search = vim.fn.input("Grep: ") })
-end)
+-- vim.keymap.set('n', '<leader>fg', function()
+-- 	telescope.grep_string({ search = vim.fn.input("Grep: ") })
+-- end)
 
 -- Find symbol definition
-vim.keymap.set('n', '<leader>fd', vim.lsp.buf.definition)
+-- vim.keymap.set('n', '<leader>fd', vim.lsp.buf.definition)
 
 -- Find signature
 vim.keymap.set('n', '<leader>fs', vim.lsp.buf.signature_help)
@@ -30,10 +28,10 @@ vim.keymap.set('n', '<leader>fs', vim.lsp.buf.signature_help)
 ----------------------------------------------------------
 
 -- Tree toggle
-vim.keymap.set('n', '<leader>tt', vim.cmd.NvimTreeFocus)
+-- vim.keymap.set('n', '<leader>tt', vim.cmd.NvimTreeFocus)
 
 -- Tree find
-vim.keymap.set('n', '<leader>tf', vim.cmd.NvimTreeFindFile)
+-- vim.keymap.set('n', '<leader>tf', vim.cmd.NvimTreeFindFile)
 
 
 ----------------------------------------------------------
@@ -43,32 +41,32 @@ vim.keymap.set('n', '<leader>tf', vim.cmd.NvimTreeFindFile)
 vim.keymap.set('x', "<leader>p", "\"_dP")
 
 -- Yank & past to clipboard
-vim.keymap.set({"n", "v"}, "<A-y>", "\"+y")
-vim.keymap.set({"n", "v"}, "<A-p>", "\"+p")
+-- vim.keymap.set({"n", "v"}, "<A-y>", "\"+y")
+-- vim.keymap.set({"n", "v"}, "<A-p>", "\"+p")
 
--- Moving blocks
-vim.keymap.set("v", "<A-h>", "<gv")
-vim.keymap.set("v", "<A-l>", ">gv")
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+-- Moing blocks
+-- vim.keymap.set("v", "<A-h>", "<gv")
+-- vim.keymap.set("v", "<A-l>", ">gv")
+-- vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+-- vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 
 -- Arrow keys don't do shit'
-vim.keymap.set({"n", "v"}, "<Left>", "")
-vim.keymap.set({"n", "v"}, "<Right>", "")
-vim.keymap.set({"n", "v"}, "<Down>", "");
-vim.keymap.set({"n", "v"}, "<Up>", "");
+-- vim.keymap.set({"n", "v"}, "<Left>", "")
+-- vim.keymap.set({"n", "v"}, "<Right>", "")
+-- vim.keymap.set({"n", "v"}, "<Down>", "");
+-- vim.keymap.set({"n", "v"}, "<Up>", "");
 
 -- Moving between blocks
-vim.keymap.set("n", "<A-z>", "}")
-vim.keymap.set("n", "<A-a>", "{")
+-- vim.keymap.set("n", "<A-z>", "}")
+-- vim.keymap.set("n", "<A-a>", "{")
 
 ----------------------------------------------------------
 ------- SPLITS -------------------------------------------
 ----------------------------------------------------------
 
 -- Create splits
-vim.keymap.set('n', '<leader>s\"',vim.cmd.FocusSplitDown)
-vim.keymap.set('n', '<leader>s%', vim.cmd.FocusSplitLeft)
+-- vim.keymap.set('n', '<leader>s\"',vim.cmd.FocusSplitDown)
+-- vim.keymap.set('n', '<leader>s%', vim.cmd.FocusSplitLeft)
 
 -- Equalize & Maximize
 vim.keymap.set('n', '<leader>se', vim.cmd.FocusEqualise)
