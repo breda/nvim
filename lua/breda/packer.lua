@@ -13,8 +13,9 @@ return require('packer').startup(function(use)
 	-- Colorschemes
 	--use { "catppuccin/nvim", as = "catppuccin" }
 	--use {'nyoom-engineering/oxocarbon.nvim'}
-	use ('marko-cerovac/material.nvim')
-    use ('DAddYE/soda.vim')
+	use ('marko-cerovac/material.nvim') 
+	use ('DAddYE/soda.vim')
+	use ("rebelot/kanagawa.nvim")
 
 	-- Status bar 
 	use {
@@ -48,6 +49,7 @@ return require('packer').startup(function(use)
 
 	-- Fugitive
 	use ('tpope/vim-fugitive')
+	use ('lewis6991/gitsigns.nvim')
 
 	-- Distraction free
 	use ('folke/zen-mode.nvim')
@@ -59,15 +61,25 @@ return require('packer').startup(function(use)
 	-- Buffer management
     use ('johann2357/nvim-smartbufs')
 
-	-- NerdTree
-	use ('preservim/nerdtree')
-    use ('ryanoasis/vim-devicons')
+	-- Tmux + Nvim 
+	use ('christoomey/vim-tmux-navigator')
+	use ('tpope/vim-obsession')
+
+	-- File tree
+	use ('echasnovski/mini.base16')
+	use ('nvim-tree/nvim-web-devicons')
+	use ('nvim-tree/nvim-tree.lua')
 
 	-- Splits 
 	use ('beauwilliams/focus.nvim')
 
+	-- Dev
+	use ('tpope/vim-commentary')
+
 	-- PHP dev 
 	use ('phpactor/phpactor')
+	use ('tobyS/vmustache')
+	use ('tobyS/pdv')
 
 	-- Go dev
 	use ('ray-x/go.nvim')

@@ -127,6 +127,11 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["go.nvim"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/go.nvim",
@@ -141,6 +146,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -177,6 +187,11 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/memento.nvim",
     url = "https://github.com/gaborvecsei/memento.nvim"
   },
+  ["mini.base16"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/mini.base16",
+    url = "https://github.com/echasnovski/mini.base16"
+  },
   ["move.nvim"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/move.nvim",
@@ -191,11 +206,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
-  },
-  nerdtree = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
   },
   ["noice.nvim"] = {
     loaded = true,
@@ -227,21 +237,30 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-smartbufs",
     url = "https://github.com/johann2357/nvim-smartbufs"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  pdv = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/pdv",
+    url = "https://github.com/tobyS/pdv"
   },
   phpactor = {
     loaded = true,
@@ -283,15 +302,30 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
   },
-  ["vim-devicons"] = {
+  ["vim-commentary"] = {
     loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/vim-devicons",
-    url = "https://github.com/ryanoasis/vim-devicons"
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-obsession"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/vim-obsession",
+    url = "https://github.com/tpope/vim-obsession"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  vmustache = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/vmustache",
+    url = "https://github.com/tobyS/vmustache"
   },
   ["zen-mode.nvim"] = {
     loaded = true,

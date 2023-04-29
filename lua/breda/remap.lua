@@ -30,10 +30,10 @@ vim.keymap.set('n', '<leader>fs', vim.lsp.buf.signature_help)
 ----------------------------------------------------------
 
 -- Tree toggle
-vim.keymap.set('n', '<leader>tt', vim.cmd.NERDTreeToggle)
+vim.keymap.set('n', '<leader>tt', vim.cmd.NvimTreeFocus)
 
 -- Tree find
-vim.keymap.set('n', '<leader>tf', vim.cmd.NERDTreeFind)
+vim.keymap.set('n', '<leader>tf', vim.cmd.NvimTreeFindFile)
 
 
 ----------------------------------------------------------
@@ -41,6 +41,10 @@ vim.keymap.set('n', '<leader>tf', vim.cmd.NERDTreeFind)
 ----------------------------------------------------------
 -- Paste
 vim.keymap.set('x', "<leader>p", "\"_dP")
+
+-- Yank & past to clipboard
+vim.keymap.set({"n", "v"}, "<A-y>", "\"+y")
+vim.keymap.set({"n", "v"}, "<A-p>", "\"+p")
 
 -- Moving blocks
 vim.keymap.set("v", "<A-h>", "<gv")
@@ -96,7 +100,7 @@ vim.keymap.set("n", "<leader>_", function()  require("nvim-smartbufs").goto_buff
 vim.keymap.set("n", "<leader>ç", function()  require("nvim-smartbufs").goto_buffer(9) end)
 
 -- Close buffers with numbers line
-vim.keymap.set("n", "<leader>qq", function()  require("nvim-smartbufs").close_current_buffer() end)
+vim.keymap.set("n", "<leader>x", function()  require("nvim-smartbufs").close_current_buffer() end)
 
 -- Mark buffer for fast switch
 vim.keymap.set('n', '<leader>bm', function()
@@ -115,7 +119,7 @@ end)
 
 -- List buffers
 vim.keymap.set('n', '<leader>bl', function()
-    require("harpoon.ui").nav_prev()
+    require("harpoon.ui").toggle_quick_menu()
 end)
 
 ----------------------------------------------------------
@@ -136,9 +140,8 @@ vim.keymap.set("n", "<leader>pn", vim.cmd.PhpactorClassNew)
 vim.keymap.set("n", "<leader>pi", vim.cmd.PhpactorTransform)
 vim.keymap.set("n", "<leader>pu", vim.cmd.PhpactorImportClass)
 vim.keymap.set("n", "<leader>pe", vim.cmd.PhpactorClassExpand)
---vim.keymap.set("n", "<leader>pc", vim.cmd.PhpactorTransform)
 vim.keymap.set("n", "<leader>pp", vim.cmd.PhpactorContextMenu)
-vim.keymap.set("n", "<leader>pc", vim.cmd.PhpDocPasteComment)
+vim.keymap.set("n", "<leader>pc", vim.fn['pdv#DocumentCurrentLine'])
 
 -- Go
 vim.keymap.set("n", "<leader>gt", vim.cmd.GoAddTag)
@@ -150,9 +153,14 @@ vim.keymap.set("n", "<leader>gt", vim.cmd.GoAddTag)
 -- Toggle zen mode
 vim.keymap.set("n", "<leader>md", vim.cmd.ZenMode)
 
--- Update colorscheme to something bright. 
--- In order to revert it back to the original in colors.lua you need to restart
-vim.keymap.set("n", "<leader>mcl", function()
-    vim.cmd[[colorscheme soda]]
+-- Light theme is "lotus" by kanagawa
+vim.keymap.set("n", "<leader>tl", function()
+    require("kanagawa").load("lotus")
 end)
+
+-- Dark theme is "dragon" by kanagawa
+vim.keymap.set("n", "<leader>td", function()
+    require("kanagawa").load("dragon")
+end)
+
 
