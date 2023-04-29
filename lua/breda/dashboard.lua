@@ -60,6 +60,26 @@ require('dashboard').setup({
         key_hl = 'Number',
         action = ''
       },
+      {
+        icon = ' ',
+        icon_hl = 'Title',
+        desc = 'Dark Mode             ',
+        desc_hl = 'String',
+        key = 'SPC  m d',
+        keymap = '',
+        key_hl = 'Number',
+        action = ''
+      },
+      {
+        icon = ' ',
+        icon_hl = 'Title',
+        desc = 'Light Mode           ',
+        desc_hl = 'String',
+        key = 'SPC m l',
+        keymap = '',
+        key_hl = 'Number',
+        action = ''
+      },
     },
     footer = {}
   }

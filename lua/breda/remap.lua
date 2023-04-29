@@ -151,15 +151,15 @@ vim.keymap.set("n", "<leader>gt", vim.cmd.GoAddTag)
 --------------------------------------
 
 -- Toggle zen mode
-vim.keymap.set("n", "<leader>md", vim.cmd.ZenMode)
+vim.keymap.set("n", "<leader>mz", vim.cmd.ZenMode)
 
--- Light theme is "lotus" by kanagawa
-vim.keymap.set("n", "<leader>tl", function()
+-- Light mode is "lotus" by kanagawa
+vim.keymap.set("n", "<leader>ml", function()
     require("kanagawa").load("lotus")
 end)
 
--- Dark theme is "dragon" by kanagawa
-vim.keymap.set("n", "<leader>td", function()
+-- Dark mode is "dragon" by kanagawa
+vim.keymap.set("n", "<leader>md", function()
     require("kanagawa").load("dragon")
 end)
 

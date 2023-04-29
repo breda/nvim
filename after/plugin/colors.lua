@@ -25,8 +25,8 @@ require('kanagawa').setup({
             dragonBlack0 = "#0d0c0c",
             dragonBlack1 = "#12120f",
             dragonBlack2 = "#1D1C19",
-            dragonBlack3 = "#0f111a", -- Updated
-            dragonBlack4 = "#0f111a", -- Updated
+            dragonBlack3 = "#0f111a", -- Updated to match terminal theme
+            dragonBlack4 = "#0f111a", -- Updated to match terminal theme
             dragonBlack5 = "#393836",
             dragonBlack6 = "#625e5a",
         },
