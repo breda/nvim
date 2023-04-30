@@ -1,4 +1,6 @@
 local telescope = require('telescope.builtin')
+local smartbufs = require('nvim-smartbufs')
+local theme = require("kanagawa")
 
 local lsp = vim.lsp
 local cmd = vim.cmd
@@ -9,8 +11,7 @@ return {
     -----------------------------
     { description = "Open file fuzzy finder (All files)", modes = "n", keys = "<leader>fa", run = telescope.find_files, opts = {}},
     { description = "Open file fuzzy finder (Git files)", modes = "n", keys = "<leader>ff", run = telescope.git_files, opts = {}},
-    { description = "Search for word (Grep)", modes = "n", keys = "<leader>fg", run = function() telescope.grep_string({ search = vim.fn.input("Grep: ") }) end, opts = {}},
-    { description = "Find definition (LSP)", modes = "n", keys = "<leader>fd", run = lsp.buf.definition, opts = {}},
+    -- { description = "Search for word (Grep)", modes = "n", keys = "<leader>fg", run = function() telescope.grep_string({ search = vim.fn.input("Grep: ") }) end, opts = {}},
 
     -----------------------------
     -- File tree
@@ -47,16 +48,44 @@ return {
     -----------------------------
     -- Buffer management
     -----------------------------
-
+    { description = "Close current buffer", modes = "n", keys = "<leader>x", run = function()  smartbufs.close_current_buffer() end, opts = {}},
+    { description = "Buffers selection", modes = "n", keys = "<leader>&", run = function()  smartbufs.goto_buffer(1) end, opts = {}},
+    { description = "Buffers selection", modes = "n", keys = "<leader>é", run = function()  smartbufs.goto_buffer(2) end, opts = {}},
+    { description = "Buffers selection", modes = "n", keys = "<leader>\"", run = function()  smartbufs.goto_buffer(3) end, opts = {}},
+    { description = "Buffers selection", modes = "n", keys = "<leader>'", run = function()  smartbufs.goto_buffer(4) end, opts = {}},
+    { description = "Buffers selection", modes = "n", keys = "<leader>(", run = function()  smartbufs.goto_buffer(5) end, opts = {}},
+    { description = "Buffers selection", modes = "n", keys = "<leader>-", run = function()  smartbufs.goto_buffer(6) end, opts = {}},
+    { description = "Buffers selection", modes = "n", keys = "<leader>è", run = function()  smartbufs.goto_buffer(7) end, opts = {}},
+    { description = "Buffers selection", modes = "n", keys = "<leader>_", run = function()  smartbufs.goto_buffer(8) end, opts = {}},
+    { description = "Buffers selection", modes = "n", keys = "<leader>ç", run = function()  smartbufs.goto_buffer(9) end, opts = {}},
 
     -----------------------------
-    -- Languages
+    -- LSP & Languages
     -----------------------------
+    { description = "Rename symbol", modes = "n", keys = "<leader>lr", run = lsp.buf.rename, opts = {}},
+    { description = "Find definition (LSP)", modes = "n", keys = "<leader>fd", run = lsp.buf.definition, opts = {}},
+
+    -- PHP
+    { description = "PHP: Duplicate class", modes = "n", keys = "<leader>pd", run = cmd.PhpactorCopyFile, opts = {}},
+    { description = "PHP: Rename class", modes = "n", keys = "<leader>pm", run = cmd.PhpactorMoveFile, opts = {}},
+    { description = "PHP: New class", modes = "n", keys = "<leader>pn", run = cmd.PhpactorClassNew, opts = {}},
+    { description = "PHP: Transform", modes = "n", keys = "<leader>pi", run = cmd.PhpactorTransform, opts = {}},
+    { description = "PHP: Import", modes = "n", keys = "<leader>pu", run = cmd.PhpactorImportClass, opts = {}},
+    { description = "PHP: Expand FQCN", modes = "n", keys = "<leader>pe", run = cmd.PhpactorClassExpand, opts = {}},
+    { description = "PHP: Open context menu", modes = "n", keys = "<leader>pp", run = cmd.PhpactorContextMenu, opts = {}},
+    { description = "PHP: Add DocBlock", modes = "n", keys = "<leader>pc", run = vim.fn['pdv#DocumentCurrentLine'], opts = {}},
+
+    -- Go
+    { description = "Go: Add struct tags", modes = "n", keys = "<leader>gt", run = cmd.GoAddTag, opts = {}},
 
 
     -----------------------------
     -- Utilities
     -----------------------------
+    -- Modes
+    { description = "Mode: Toggle Zen", modes = "n", keys = "<leader>mz", run = cmd.ZenMode, opts = {}},
+    { description = "Mode: Toggle Dark Theme", modes = "n", keys = "<leader>md", run = function() theme.load("dragon") end, opts = {}},
+    { description = "Mode: Toggle Light Theme", modes = "n", keys = "<leader>ml", run = function() theme.load("lotus") end, opts = {}},
 
 
     -----------------------------
@@ -69,6 +98,5 @@ return {
     { description = "Arrow keys are not allowed", modes = {"n", "v"}, keys = "<Right>", run = "", opts = { silent = true, noremap = true }},
     { description = "Arrow keys are not allowed", modes = {"n", "v"}, keys = "<Up>", run = "", opts = { silent = true, noremap = true }},
     { description = "Arrow keys are not allowed", modes = {"n", "v"}, keys = "<Down>", run = "", opts = { silent = true, noremap = true }},
-
 
 }

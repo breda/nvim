@@ -13,8 +13,8 @@ return require('packer').startup(function(use)
 	-- Colorschemes
 	--use { "catppuccin/nvim", as = "catppuccin" }
 	--use {'nyoom-engineering/oxocarbon.nvim'}
-	use ('marko-cerovac/material.nvim')
-	use ('DAddYE/soda.vim')
+	-- use ('marko-cerovac/material.nvim')
+	-- use ('DAddYE/soda.vim')
 	use ("rebelot/kanagawa.nvim")
 
 	-- Status bar 

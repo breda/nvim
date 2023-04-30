@@ -8,7 +8,7 @@ require("noice").setup({
                 col = "50%",
             },
             size = {
-                width = "70%",
+                width = "55%",
             },
             border = {
                 style = "single",

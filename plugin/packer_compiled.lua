@@ -177,11 +177,6 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["material.nvim"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/material.nvim",
-    url = "https://github.com/marko-cerovac/material.nvim"
-  },
   ["memento.nvim"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/memento.nvim",
@@ -271,11 +266,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["soda.vim"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/soda.vim",
-    url = "https://github.com/DAddYE/soda.vim"
   },
   ["telescope.nvim"] = {
     loaded = true,
