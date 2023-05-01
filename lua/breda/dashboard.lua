@@ -35,17 +35,7 @@ require('dashboard').setup({
         icon_hl = 'Title',
         desc = 'Find File           ',
         desc_hl = 'String',
-        key = 'SPC f f',
-        keymap = '',
-        key_hl = 'Number',
-        action = ''
-      },
-      {
-        icon = ' ',
-        icon_hl = 'Title',
-        desc = 'Find Word           ',
-        desc_hl = 'String',
-        key = 'SPC f g',
+        key = 'SPC f a',
         keymap = '',
         key_hl = 'Number',
         action = ''
