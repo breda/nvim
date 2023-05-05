@@ -25,8 +25,11 @@ lspconfig.phpactor.setup{
         ["language_server_psalm.enabled"] = false,
         ["language_server_php_cs_fixer.enabled"] = false,
 
-        ["symfony.enabled"] = true,
+        ["indexer.follow_symlinks"] = true,
+        ["indexer.poll_time"] = 2000, -- 2seconds
         ["composer.enable"] = true,
+
+        ["symfony.enabled"] = true,
         ["phpunit.enabled"] = true,
 
         ["php.version"] = "8.2",
