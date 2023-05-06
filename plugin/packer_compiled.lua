@@ -152,6 +152,11 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
+  ["leap.nvim"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -186,11 +191,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/mini.base16",
     url = "https://github.com/echasnovski/mini.base16"
-  },
-  ["move.nvim"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/move.nvim",
-    url = "https://github.com/fedepujol/move.nvim"
   },
   neogen = {
     loaded = true,
@@ -306,6 +306,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/vim-obsession",
     url = "https://github.com/tpope/vim-obsession"
+  },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,

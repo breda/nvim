@@ -30,12 +30,6 @@ return {
     { description = "Move block to right (indent)", modes = "v", keys = "<A-l>", run = ">gv", opts = { silent = true }},
     { description = "Move block to left (de-indent)", modes = "v", keys = "<A-h>", run = "<gv", opts = { silent = true }},
 
-    { description = "Locate file in File Tree", modes = "n", keys = "<leader>tf", run = cmd.NvimTreeFindFile, opts = {}},
-    { description = "Locate file in File Tree", modes = "n", keys = "<leader>tf", run = cmd.NvimTreeFindFile, opts = {}},
-    { description = "Locate file in File Tree", modes = "n", keys = "<leader>tf", run = cmd.NvimTreeFindFile, opts = {}},
-
-
-
     -----------------------------
     -- Split management
     -----------------------------

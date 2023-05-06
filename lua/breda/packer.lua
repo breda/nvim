@@ -32,7 +32,10 @@ return require('packer').startup(function(use)
 	}
 
 	-- Motion
-	use 'fedepujol/move.nvim'
+	use {
+		'ggandor/leap.nvim',
+		requires = {"tpope/vim-repeat"},
+	}
 
 	-- Treesitter
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
