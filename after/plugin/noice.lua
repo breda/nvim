@@ -1,10 +1,26 @@
 require("noice").setup({
+    routes = {
+        -- Hide "written" messages
+        {
+            filter = {
+                event = "msg_show",
+                kind = "",
+                find = "written",
+            },
+            opts = { skip = true },
+        },
+        -- Hide useless LSP message
+        {
+            filter = { find = "No information available" },
+            opts = { stop = true },
+        },
+    },
     cmdline = {
-        enabled = true, -- enables the Noice cmdline UI
-        view = "cmdline_popup", -- Change to `cmdline` to get a classic cmdline at the bottom
+        enabled = true,
+        view = "cmdline_popup",
         opts = {
             position = {
-                row = "98%",
+                row = "96%",
                 col = "50%",
             },
             size = {

@@ -95,7 +95,6 @@ return require('packer').startup(function(use)
 	-- Learning & utils
 	use ('ThePrimeagen/vim-be-good')
 
-
 	-- LSP setup: https://github.com/VonHeikemen/lsp-zero.nvim
 	use {
 		'VonHeikemen/lsp-zero.nvim',
