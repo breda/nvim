@@ -23,7 +23,6 @@ return {
     -- Motion and actions
     -----------------------------
     { description = "Yank/copy to clipboard", modes = {"n", "v"}, keys = "<A-y>", run = "\"+y", opts = {}},
-    { description = "Cut to clipboard", modes = {"n", "v"}, keys = "<A-d>", run = "\"+ydd", opts = {}},
     { description = "Paste from clipboard", modes = {"n", "v"}, keys = "<A-p>", run = "\"+p", opts = {}},
 
     { description = "Move block up", modes = "v", keys = "<A-k>", run = ":m '<-2<CR>gv=gv", opts = { silent = true }},
