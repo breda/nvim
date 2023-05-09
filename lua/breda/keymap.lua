@@ -30,6 +30,12 @@ return {
     { description = "Move block to right (indent)", modes = "v", keys = "<A-l>", run = ">gv", opts = { silent = true }},
     { description = "Move block to left (de-indent)", modes = "v", keys = "<A-h>", run = "<gv", opts = { silent = true }},
 
+    { description = "J should not move cursor to end", modes = "n", keys = "J", run = "mzJ`z", opts = { silent = true }},
+
+    { description = "Stay in middle of screen when searching", modes = "n", keys = "n", run = "nzzzv", opts = { silent = true }},
+    { description = "Stay in middle of screen when searching", modes = "n", keys = "N", run = "nzzzv", opts = { silent = true }},
+
+
     -----------------------------
     -- Split management
     -----------------------------
@@ -83,14 +89,18 @@ return {
 
 
     -----------------------------
-    -- Remaps and "not allowed"
+    -- Remaps
     -----------------------------
     { description = "Remap next block", modes = "n", keys = "<A-z>", run = "{", opts = { silent = true, noremap = true }},
     { description = "Remap previous block", modes = "n", keys = "<A-a>", run = "}", opts = { silent = true, noremap = true }},
 
-    { description = "Arrow keys are not allowed", modes = {"n", "v"}, keys = "<Left>", run = "", opts = { silent = true, noremap = true }},
-    { description = "Arrow keys are not allowed", modes = {"n", "v"}, keys = "<Right>", run = "", opts = { silent = true, noremap = true }},
-    { description = "Arrow keys are not allowed", modes = {"n", "v"}, keys = "<Up>", run = "", opts = { silent = true, noremap = true }},
-    { description = "Arrow keys are not allowed", modes = {"n", "v"}, keys = "<Down>", run = "", opts = { silent = true, noremap = true }},
+    -----------------------------
+    -- Not allowed
+    -----------------------------
+    { description = "Arrow keys are not allowed", modes = {"n", "v", "i"}, keys = "<Left>", run = "<nop>", opts = { silent = true, noremap = true }},
+    { description = "Arrow keys are not allowed", modes = {"n", "v", "i"}, keys = "<Right>", run = "<nop>", opts = { silent = true, noremap = true }},
+    { description = "Arrow keys are not allowed", modes = {"n", "v", "i"}, keys = "<Up>", run = "<nop>", opts = { silent = true, noremap = true }},
+    { description = "Arrow keys are not allowed", modes = {"n", "v", "i"}, keys = "<Down>", run = "<nop>", opts = { silent = true, noremap = true }},
 
+    { description = "Q is not allowed", modes = {"n"}, keys = "Q", run = "<nop>", opts = { silent = true, noremap = true }},
 }
