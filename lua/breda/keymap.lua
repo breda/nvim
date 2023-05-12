@@ -9,9 +9,10 @@ return {
     -----------------------------
     -- Find stuff
     -----------------------------
-    { description = "Open file fuzzy finder (All files)", modes = "n", keys = "<leader>fa", run = telescope.find_files, opts = {}},
-    { description = "Open file fuzzy finder (Git files)", modes = "n", keys = "<leader>ff", run = telescope.git_files, opts = {}},
-    -- { description = "Search for word (Grep)", modes = "n", keys = "<leader>fg", run = function() telescope.grep_string({ search = vim.fn.input("Grep: ") }) end, opts = {}},
+    { description = "Search Old Files", modes = "n", keys = "<leader>ss", run = telescope.oldfiles, opts = {}},
+    { description = "Search All Files", modes = "n", keys = "<leader>sf", run = telescope.find_files, opts = {}},
+    { description = "Search By Grep", modes = "n", keys = "<leader>sg", run = telescope.live_grep, opts = {}},
+    { description = "Search Help", modes = "n", keys = "<leader>sh", run = telescope.help_tags, opts = {}},
 
     -----------------------------
     -- File tree

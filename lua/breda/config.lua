@@ -1,6 +1,9 @@
 -- leader
 vim.g.mapleader = " "
 
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
 -- Numbers line and relative numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true

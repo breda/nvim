@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
 	-- use ('DAddYE/soda.vim')
 	use ("rebelot/kanagawa.nvim")
 
-	-- Status bar 
+	-- Status bar
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
 	-- Buffer management
     use ('johann2357/nvim-smartbufs')
 
-	-- Tmux + Nvim 
+	-- Tmux + Nvim
 	use ('christoomey/vim-tmux-navigator')
 	use ('tpope/vim-obsession')
 
@@ -67,13 +67,13 @@ return require('packer').startup(function(use)
 	use ('nvim-tree/nvim-web-devicons')
 	use ('nvim-tree/nvim-tree.lua')
 
-	-- Splits 
+	-- Splits
 	use ('beauwilliams/focus.nvim')
 
 	-- Dev
 	use ('tpope/vim-commentary')
 
-	-- PHP dev 
+	-- PHP dev
 	use ('phpactor/phpactor')
 	use ('tobyS/vmustache')
 	use ('tobyS/pdv')
@@ -104,16 +104,15 @@ return require('packer').startup(function(use)
 			{'williamboman/mason.nvim'},
 			{'williamboman/mason-lspconfig.nvim'},
 
-
 			-- Autocompletion
 			{'hrsh7th/nvim-cmp'},
 			{'hrsh7th/cmp-buffer'},
 			{'hrsh7th/cmp-path'},
-			{'saadparwaiz1/cmp_luasnip'},
 			{'hrsh7th/cmp-nvim-lsp'},
 			{'hrsh7th/cmp-nvim-lua'},
 
 			-- Snippets
+			{'saadparwaiz1/cmp_luasnip'},
 			{'L3MON4D3/LuaSnip'},
 			{'rafamadriz/friendly-snippets'},
 		}

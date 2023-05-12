@@ -1,39 +1,8 @@
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
-
 -- Bellow config is taken from https://github.com/reyhankaplan/dotfiles/blob/master/.config/nvim/plugin/packages/nvim_tree.lua
--- Slightly adjusted for needs
-vim.g.nvim_tree_git_hl = 1
-vim.g.nvim_tree_show_icons = {
-  git = 0,
-  folders = 1,
-  files = 1,
-}
-
-vim.g.nvim_tree_icons = {
-  default = '',
-  symlink = '',
-  git = {
-    unstaged = '',
-    staged = '',
-    unmerged = '',
-    renamed = '',
-    deleted = '',
-    untracked = '',
-    ignored = '',
-  },
-  folder = {
-    default = '',
-    open = '',
-    symlink = '',
-  },
-}
-
 local nvim_tree = require('nvim-tree')
 
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
-
   local function opts(desc)
     return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
@@ -68,7 +37,36 @@ end
 -- Setup nvim_tree
 nvim_tree.setup({
   update_focused_file = { enable = true },
+  auto_reload_on_write = true,
   hijack_cursor = true,
   on_attach = on_attach,
+
+  -- View
+  view = {
+    width = 40,
+    hide_root_folder = false,
+    side = "left",
+    preserve_window_proportions = false,
+    number = false,
+    signcolumn = "no",
+  },
+
+  git = {
+    enable = false,
+  },
+
+  -- Render
+  renderer = {
+    indent_width = 2,
+    icons = {
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = true,
+        git = false,
+        modified = false,
+      },
+    },
+  },
 })
 

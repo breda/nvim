@@ -33,6 +33,14 @@ require('telescope').setup({
                 height = 0.5,
             },
         },
+        oldfiles = {
+            theme = "dropdown",
+            previewer = false,
+            layout_config = {
+                width = 0.4,
+                height = 0.5,
+            },
+        },
     },
     extensions_list = { "themes", "terms" },
 })

@@ -2,6 +2,16 @@ require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = {"lua", "bash", "go", "jsonc", "php", "proto", "yaml", "python"},
 
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<C-o>", -- set to `false` to disable one of the mappings
+      node_incremental = "<C-o>",
+      scope_incremental = false,
+      node_decremental = "<C-i>",
+    },
+  },
+
   indent = {
     enable = true
   },
