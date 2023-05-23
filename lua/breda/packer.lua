@@ -38,6 +38,9 @@ return require('packer').startup(function(use)
     use 'm4xshen/autoclose.nvim'
     use 'nmac427/guess-indent.nvim'
 
+	-- surround stuff
+	use "kylechui/nvim-surround"
+
     -- Annotations
     use ("danymat/neogen")
 

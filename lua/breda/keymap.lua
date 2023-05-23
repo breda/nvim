@@ -17,8 +17,9 @@ return {
     -----------------------------
     -- File tree
     -----------------------------
-    { description = "Toggle File Tree", modes = "n", keys = "<leader>tt", run = cmd.NvimTreeFocus },
-    { description = "Locate file in File Tree", modes = "n", keys = "<leader>tf", run = cmd.NvimTreeFindFile, opts = {}},
+    { description = "Toggle File Tree", modes = "n", keys = "<leader>tt", run = cmd.NvimTreeToggle },
+    { description = "Focus File Tree", modes = "n", keys = "<leader>tf", run = cmd.NvimTreeFocus },
+    { description = "Locate file in Tree", modes = "n", keys = "<leader>tl", run = cmd.NvimTreeFindFile, opts = {}},
 
     -----------------------------
     -- Motion and actions
@@ -40,7 +41,7 @@ return {
     -----------------------------
     -- Split management
     -----------------------------
-    { description = "Split left (vertical)", modes = "n", keys = "<leader>s\"", run = cmd.FocusSplitLeft, opts = {}},
+    { description = "Split left (vertical)", modes = "n", keys = "<leader>s*", run = cmd.FocusSplitLeft, opts = {}},
     { description = "Split down (horizontal)", modes = "n", keys = "<leader>s%", run = cmd.FocusSplitDown, opts = {}},
 
     { description = "Split Maximize", modes = "n", keys = "<leader>sz", run = cmd.FocusMaximise, opts = {}},
@@ -50,15 +51,8 @@ return {
     -- Buffer management
     -----------------------------
     { description = "Close current buffer", modes = "n", keys = "<leader>x", run = function()  smartbufs.close_current_buffer() end, opts = {}},
-    { description = "Buffers selection", modes = "n", keys = "<leader>&", run = function()  smartbufs.goto_buffer(1) end, opts = {}},
-    { description = "Buffers selection", modes = "n", keys = "<leader>é", run = function()  smartbufs.goto_buffer(2) end, opts = {}},
-    { description = "Buffers selection", modes = "n", keys = "<leader>\"", run = function()  smartbufs.goto_buffer(3) end, opts = {}},
-    { description = "Buffers selection", modes = "n", keys = "<leader>'", run = function()  smartbufs.goto_buffer(4) end, opts = {}},
-    { description = "Buffers selection", modes = "n", keys = "<leader>(", run = function()  smartbufs.goto_buffer(5) end, opts = {}},
-    { description = "Buffers selection", modes = "n", keys = "<leader>-", run = function()  smartbufs.goto_buffer(6) end, opts = {}},
-    { description = "Buffers selection", modes = "n", keys = "<leader>è", run = function()  smartbufs.goto_buffer(7) end, opts = {}},
-    { description = "Buffers selection", modes = "n", keys = "<leader>_", run = function()  smartbufs.goto_buffer(8) end, opts = {}},
-    { description = "Buffers selection", modes = "n", keys = "<leader>ç", run = function()  smartbufs.goto_buffer(9) end, opts = {}},
+    { description = "Next Buffer", modes = "n", keys = "<leader>n", run = function()  smartbufs.goto_next_buffer() end, opts = {}},
+    { description = "Prev Buffer", modes = "n", keys = "<leader>p", run = function()  smartbufs.goto_prev_buffer() end, opts = {}},
 
     -----------------------------
     -- LSP & Languages
@@ -79,7 +73,6 @@ return {
     -- Go
     { description = "Go: Add struct tags", modes = "n", keys = "<leader>gt", run = cmd.GoAddTag, opts = {}},
 
-
     -----------------------------
     -- Utilities
     -----------------------------
@@ -87,13 +80,6 @@ return {
     { description = "Mode: Toggle Zen", modes = "n", keys = "<leader>mz", run = cmd.ZenMode, opts = {}},
     { description = "Mode: Toggle Dark Theme", modes = "n", keys = "<leader>md", run = function() theme.load("dragon") end, opts = {}},
     { description = "Mode: Toggle Light Theme", modes = "n", keys = "<leader>ml", run = function() theme.load("lotus") end, opts = {}},
-
-
-    -----------------------------
-    -- Remaps
-    -----------------------------
-    { description = "Remap next block", modes = "n", keys = "<A-z>", run = "{", opts = { silent = true, noremap = true }},
-    { description = "Remap previous block", modes = "n", keys = "<A-a>", run = "}", opts = { silent = true, noremap = true }},
 
     -----------------------------
     -- Not allowed

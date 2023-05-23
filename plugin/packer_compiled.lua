@@ -227,6 +227,11 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-smartbufs",
     url = "https://github.com/johann2357/nvim-smartbufs"
   },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
