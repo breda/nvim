@@ -8,6 +8,8 @@ require("noice").setup({
         { filter = { find = "change" }, opts = { stop = true }, },
         { filter = { find = "lines yanked" }, opts = { stop = true }, },
         { filter = { find = "more line" }, opts = { stop = true }, },
+        { filter = { find = "under cursor" }, opts = { stop = true }, },
+        { filter = { find = "no manual entry" }, opts = { stop = true }, },
     },
     cmdline = {
         enabled = true,
@@ -30,3 +32,5 @@ require("noice").setup({
         },
     },
 })
+
+
