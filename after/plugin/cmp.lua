@@ -38,9 +38,10 @@ cmp.setup({
       end, { "i", "s" }),
     },
     sources = {
-      { name = "nvim_lsp" }, -- For nvim-lsp
-      { name = "luasnip" },
-      { name = "path" }, -- for path completion
-      { name = "buffer", keyword_length = 2 }, -- for buffer word completion
+      { name = "nvim_lsp" },
+      { name = "path" },
+      { name = "buffer", keyword_length = 2 },
+      { name = "tmux" },
+      { name = 'cmp_tabnine' },
     },
 })

@@ -5,10 +5,10 @@ require'nvim-treesitter.configs'.setup {
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = "<C-o>", -- set to `false` to disable one of the mappings
-      node_incremental = "<C-o>",
+      init_selection = "<C-S-o>", -- set to `false` to disable one of the mappings
+      node_incremental = "<C-S-o>",
       scope_incremental = false,
-      node_decremental = "<C-i>",
+      node_decremental = "<C-S-l>",
     },
   },
 

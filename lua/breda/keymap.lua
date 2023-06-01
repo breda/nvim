@@ -2,6 +2,9 @@ local telescope = require('telescope.builtin')
 local smartbufs = require('nvim-smartbufs')
 local theme = require("kanagawa")
 
+local reach = require('reach')
+local reachOpts = require('breda/reach-opts')
+
 local lsp = vim.lsp
 local cmd = vim.cmd
 
@@ -41,24 +44,35 @@ return {
     -----------------------------
     -- Split management
     -----------------------------
-    { description = "Split left (vertical)", modes = "n", keys = "<leader>s*", run = cmd.FocusSplitLeft, opts = {}},
-    { description = "Split down (horizontal)", modes = "n", keys = "<leader>s%", run = cmd.FocusSplitDown, opts = {}},
+    { description = "Split left (vertical)", modes = "n", keys = "<leader>sh", run = cmd.FocusSplitRight, opts = {}},
+    { description = "Split down (horizontal)", modes = "n", keys = "<leader>sv", run = cmd.FocusSplitDown, opts = {}},
 
-    { description = "Split Maximize", modes = "n", keys = "<leader>sz", run = cmd.FocusMaximise, opts = {}},
+    { description = "Split Zoom", modes = "n", keys = "<leader>sb", run = cmd.TZFocus, opts = {}},
     { description = "Split Equalise", modes = "n", keys = "<leader>se", run = cmd.FocusEqualise, opts = {}},
 
     -----------------------------
     -- Buffer management
     -----------------------------
     { description = "Close current buffer", modes = "n", keys = "<leader>x", run = function()  smartbufs.close_current_buffer() end, opts = {}},
-    { description = "Next Buffer", modes = "n", keys = "<leader>n", run = function()  smartbufs.goto_next_buffer() end, opts = {}},
-    { description = "Prev Buffer", modes = "n", keys = "<leader>p", run = function()  smartbufs.goto_prev_buffer() end, opts = {}},
+    { description = "Select buffer 1", modes = "n", keys = "<leader>1", run = function()  smartbufs.goto_buffer(1) end, opts = {}},
+    { description = "Select buffer 2", modes = "n", keys = "<leader>2", run = function()  smartbufs.goto_buffer(2) end, opts = {}},
+    { description = "Select buffer 3", modes = "n", keys = "<leader>3", run = function()  smartbufs.goto_buffer(3) end, opts = {}},
+    { description = "Select buffer 4", modes = "n", keys = "<leader>4", run = function()  smartbufs.goto_buffer(4) end, opts = {}},
+    { description = "Select buffer 5", modes = "n", keys = "<leader>5", run = function()  smartbufs.goto_buffer(5) end, opts = {}},
+    { description = "Select buffer 6", modes = "n", keys = "<leader>6", run = function()  smartbufs.goto_buffer(6) end, opts = {}},
+    { description = "Select buffer 7", modes = "n", keys = "<leader>7", run = function()  smartbufs.goto_buffer(7) end, opts = {}},
+    { description = "Select buffer 8", modes = "n", keys = "<leader>8", run = function()  smartbufs.goto_buffer(8) end, opts = {}},
+    { description = "Select buffer 9", modes = "n", keys = "<leader>9", run = function()  smartbufs.goto_buffer(9) end, opts = {}},
+
+    { description = "Buffers quick switch", modes = "n", keys = "<leader>b", run = function() reach.buffers(reachOpts) end, opts = {}},
+    { description = "Marks quick switch", modes = "n", keys = "<leader>m", run = function() reach.marks(reachOpts) end, opts = {}},
 
     -----------------------------
     -- LSP & Languages
     -----------------------------
     { description = "Rename symbol", modes = "n", keys = "<leader>lr", run = lsp.buf.rename, opts = {}},
     { description = "Find definition (LSP)", modes = "n", keys = "<leader>fd", run = lsp.buf.definition, opts = {}},
+    { description = "Toggle undotree", modes = "n", keys = "<leader>u", run = cmd.UndotreeToggle, opts = {}},
 
     -- PHP
     { description = "PHP: Duplicate class", modes = "n", keys = "<leader>pd", run = cmd.PhpactorCopyFile, opts = {}},
@@ -73,13 +87,22 @@ return {
     -- Go
     { description = "Go: Add struct tags", modes = "n", keys = "<leader>gt", run = cmd.GoAddTag, opts = {}},
 
+    -- Tests
+    { description = "Run test: latest", modes = "n", keys = "<leader>rr", run = cmd.TestLast, opts = {}},
+    { description = "Run test: nearest", modes = "n", keys = "<leader>rn", run = cmd.TestNearest, opts = {}},
+    { description = "Run test: file", modes = "n", keys = "<leader>rf", run = cmd.TestFile, opts = {}},
+    { description = "Run test: suite", modes = "n", keys = "<leader>rs", run = cmd.TestSuite, opts = {}},
+
     -----------------------------
     -- Utilities
     -----------------------------
     -- Modes
-    { description = "Mode: Toggle Zen", modes = "n", keys = "<leader>mz", run = cmd.ZenMode, opts = {}},
+    { description = "Mode: Preview markdown", modes = "n", keys = "<leader>mp", run = cmd.Glow, opts = {}},
+    { description = "Mode: Toggle Zen", modes = "n", keys = "<leader>mz", run = cmd.TZAtaraxis, opts = {}},
     { description = "Mode: Toggle Dark Theme", modes = "n", keys = "<leader>md", run = function() theme.load("dragon") end, opts = {}},
     { description = "Mode: Toggle Light Theme", modes = "n", keys = "<leader>ml", run = function() theme.load("lotus") end, opts = {}},
+
+    { description = "Reload config", modes = "n", keys = "<leader>mr", run = ":source ~/.config/nvim/init.lua<CR>", opts = {}},
 
     -----------------------------
     -- Not allowed

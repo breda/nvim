@@ -14,7 +14,7 @@ local colors = {
   grey   = '#303030',
 }
 
-local bubbles_theme = {
+local theme = {
   normal = {
     a = { fg = colors.white, bg = colors.default },
     b = { fg = colors.blue, bg = colors.black, gui='italic,bold' },
@@ -63,8 +63,8 @@ local bubbles_theme = {
 
 require('lualine').setup {
   options = {
-    theme = bubbles_theme,
-    icons_enabled = true,
+    theme = theme,
+    icons_enabled = false,
     component_separators = '',
     section_separators = { left = '', right = '' },
   },
@@ -76,9 +76,9 @@ require('lualine').setup {
     },
     lualine_b = {'buffers'},
     lualine_c = {},
-    lualine_x = {'diagnostics'},
+    lualine_x = {'tabnine'},
     lualine_y = {'branch', 'diff'},
     lualine_z = {'filetype', 'encoding'},
   },
-  extensions = {}
+  extensions = {},
 }

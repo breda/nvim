@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
 	use ('lewis6991/gitsigns.nvim')
 
 	-- Distraction free
-	use ('folke/zen-mode.nvim')
+	use ("Pocco81/true-zen.nvim")
 
 	-- Quick switch
 	use ('ThePrimeagen/harpoon')
@@ -84,6 +84,9 @@ return require('packer').startup(function(use)
 	-- Go dev
 	use ('ray-x/go.nvim')
 
+	-- Markdown
+	use {"ellisonleao/glow.nvim"}
+
 	-- Misc
     use ('karb94/neoscroll.nvim')
     use ("folke/twilight.nvim")
@@ -107,21 +110,36 @@ return require('packer').startup(function(use)
 			{'williamboman/mason.nvim'},
 			{'williamboman/mason-lspconfig.nvim'},
 
-			-- Autocompletion
+			-- Autocompletion sources
 			{'hrsh7th/nvim-cmp'},
 			{'hrsh7th/cmp-buffer'},
 			{'hrsh7th/cmp-path'},
 			{'hrsh7th/cmp-nvim-lsp'},
 			{'hrsh7th/cmp-nvim-lua'},
+			{'andersevenrud/cmp-tmux'},
 
 			-- Snippets
 			{'saadparwaiz1/cmp_luasnip'},
 			{'L3MON4D3/LuaSnip'},
 			{'rafamadriz/friendly-snippets'},
+			{'honza/vim-snippets'},
 		}
 	}
 
 	-- LSP utils
 	use ('onsails/lspkind.nvim')
 	use ('folke/trouble.nvim')
+
+	-- Easily switch between buffers
+	use ('toppair/reach.nvim')
+
+	-- Tests
+	use ('vim-test/vim-test')
+
+	-- AI
+	use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+	use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+
+	-- Auto create directories when saving files
+	use ('jghauser/mkdir.nvim')
 end)
