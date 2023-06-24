@@ -1,3 +1,6 @@
+-- 
+-- treesitter, of course
+-- 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = {"lua", "bash", "go", "jsonc", "php", "proto", "yaml", "python"},

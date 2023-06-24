@@ -1,3 +1,6 @@
+-- 
+-- This plugin enables markdown previews inside vim using Glow
+-- 
 require("glow").setup({
     glow_path = "/usr/bin/glow", -- will be filled automatically with your glow bin in $PATH, if any
     border = "", -- floating window border config

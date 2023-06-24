@@ -1,3 +1,6 @@
+-- 
+-- LSP config
+-- 
 local lsp = require('lsp-zero')
 
 -- For now, just running the recommended

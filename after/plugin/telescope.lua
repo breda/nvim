@@ -1,3 +1,6 @@
+-- 
+-- Ain't no nvim without telescope
+-- 
 require('telescope').setup({
     defaults = {
         vimgrep_arguments = {
@@ -11,7 +14,6 @@ require('telescope').setup({
               "--smart-case",
         },
         prompt_prefix = "   ",
-
         mappings = {
           n = { ["q"] = require("telescope.actions").close },
         },
@@ -25,6 +27,15 @@ require('telescope').setup({
                 height = 0.5,
             },
         },
+
+        treesitter = {
+            previewer = false,
+            layout_config = {
+                width = 0.4,
+                height = 0.5,
+            },
+        },
+
         git_files = {
             theme = "dropdown",
             previewer = false,

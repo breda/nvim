@@ -1,6 +1,8 @@
 local telescope = require('telescope.builtin')
+local telescopeUndo = require("telescope").extensions.undo
 local smartbufs = require('nvim-smartbufs')
 local theme = require("kanagawa")
+local dap = require('dap')
 
 local reach = require('reach')
 local reachOpts = require('breda/reach-opts')
@@ -15,7 +17,24 @@ return {
     { description = "Search Old Files", modes = "n", keys = "<leader>ss", run = telescope.oldfiles, opts = {}},
     { description = "Search All Files", modes = "n", keys = "<leader>sf", run = telescope.find_files, opts = {}},
     { description = "Search By Grep", modes = "n", keys = "<leader>sg", run = telescope.live_grep, opts = {}},
-    { description = "Search Help", modes = "n", keys = "<leader>sh", run = telescope.help_tags, opts = {}},
+    { description = "Search Help", modes = "n", keys = "<leader>sm", run = telescope.help_tags, opts = {}},
+    { description = "Search Commands", modes = "n", keys = "<leader>sc", run = telescope.commands, opts = {}},
+    { description = "Search Jumplist", modes = "n", keys = "<leader>sj", run = telescope.jumplist, opts = {}},
+
+    -----------------------------
+    -- Debugging
+    -----------------------------
+    { description = "Debugger: Add breakpoint", modes = "n", keys = "<leader>db", run = dap.toggle_breakpoint, opts = {}},
+    { description = "Debugger: Continue", modes = "n", keys = "<leader>dc", run = dap.continue, opts = {}},
+    { description = "Debugger: Step through code", modes = "n", keys = "<leader>ds", run = dap.step_into, opts = {}},
+    { description = "Debugger: Launch REPL", modes = "n", keys = "<leader>dr", run = dap.repl.open, opts = {}},
+
+
+    -----------------------------
+    -- Git
+    -----------------------------
+    { description = "Git: Show buffer commits", modes = "n", keys = "<leader>gc", run = telescope.git_bcommits, opts = {}},
+    { description = "Git: Status", modes = "n", keys = "<leader>gs", run = cmd.Git, opts = {}},
 
     -----------------------------
     -- File tree
@@ -44,8 +63,8 @@ return {
     -----------------------------
     -- Split management
     -----------------------------
-    { description = "Split left (vertical)", modes = "n", keys = "<leader>sh", run = cmd.FocusSplitRight, opts = {}},
-    { description = "Split down (horizontal)", modes = "n", keys = "<leader>sv", run = cmd.FocusSplitDown, opts = {}},
+    { description = "Split left (vertical)", modes = "n", keys = "<leader>sv", run = cmd.FocusSplitRight, opts = {}},
+    { description = "Split down (horizontal)", modes = "n", keys = "<leader>sh", run = cmd.FocusSplitDown, opts = {}},
 
     { description = "Split Zoom", modes = "n", keys = "<leader>sb", run = cmd.TZFocus, opts = {}},
     { description = "Split Equalise", modes = "n", keys = "<leader>se", run = cmd.FocusEqualise, opts = {}},
@@ -70,9 +89,20 @@ return {
     -----------------------------
     -- LSP & Languages
     -----------------------------
-    { description = "Rename symbol", modes = "n", keys = "<leader>lr", run = lsp.buf.rename, opts = {}},
-    { description = "Find definition (LSP)", modes = "n", keys = "<leader>fd", run = lsp.buf.definition, opts = {}},
-    { description = "Toggle undotree", modes = "n", keys = "<leader>u", run = cmd.UndotreeToggle, opts = {}},
+    { description = "Toggle undotree", modes = "n", keys = "<leader>u", run = function () telescopeUndo.undo() end, opts = {}},
+    { description = "LSP: code actions", modes = "n", keys = "<leader>la", run = lsp.buf.code_action, opts = {}},
+    { description = "LSP: rename symbol", modes = "n", keys = "<leader>lu", run = lsp.buf.rename, opts = {}},
+    { description = "LSP: annotate", modes = "n", keys = "<leader>lc", run = cmd.Neogen, opts = {}},
+
+    { description = "LSP: list symbols", modes = "n", keys = "<leader>ls", run = telescope.treesitter, opts = {}},
+    { description = "LSP: list definitions", modes = "n", keys = "<leader>ld", run = telescope.lsp_definitions, opts = {}},
+    { description = "LSP: list type definitions", modes = "n", keys = "<leader>lt", run = telescope.lsp_type_definitions, opts = {}},
+    { description = "LSP: list references", modes = "n", keys = "<leader>lr", run = telescope.lsp_references, opts = {}},
+    { description = "LSP: list incoming calls", modes = "n", keys = "<leader>lic", run = telescope.lsp_incoming_calls, opts = {}},
+    { description = "LSP: list outgoing calls", modes = "n", keys = "<leader>loc", run = telescope.lsp_outgoing_calls, opts = {}},
+    { description = "LSP: list implementations", modes = "n", keys = "<leader>li", run = telescope.lsp_implementations, opts = {}},
+    { description = "LSP: list diagnostics", modes = "n", keys = "<leader>lg", run = telescope.diagnostics, opts = {}},
+    { description = "LSP: format", modes = "n", keys = "<leader>lf", run = lsp.buf.format, opts = {}},
 
     -- PHP
     { description = "PHP: Duplicate class", modes = "n", keys = "<leader>pd", run = cmd.PhpactorCopyFile, opts = {}},

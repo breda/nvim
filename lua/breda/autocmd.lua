@@ -32,6 +32,8 @@ api.nvim_create_autocmd('FileType', {
         'lspinfo',
         'man',
         'notify',
+        'mason',
+        'dap-repl',
     },
     callback = function(event)
         vim.bo[event.buf].buflisted = false

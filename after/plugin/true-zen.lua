@@ -1,3 +1,6 @@
+-- 
+-- true-zen enables focusing on some splits, and also the all amazing zen mode (aka distraction free)
+-- 
 require("true-zen").setup({
 	modes = { -- configurations per mode
 		ataraxis = {
@@ -70,7 +73,7 @@ require("true-zen").setup({
 		tmux = true,
 		kitty = {
 			enabled = true,
-			font = "+15"
+			font = "+5"
 		},
 		twilight = false, -- enable twilight (ataraxis)
 		lualine = false -- hide nvim-lualine (ataraxis)

@@ -1,14 +1,6 @@
---vim.cmd[[colorscheme catppuccin]]
-
---vim.opt.background = "dark" -- set this to dark or light
---vim.cmd[[colorscheme oxocarbon]]
-
-
--- vim.g.material_style = "deep ocean"
--- vim.cmd[[colorscheme material]]
---
-
--- Default options:
+-- 
+-- theme config (colorscheme)
+-- 
 require('kanagawa').setup({
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
@@ -25,14 +17,16 @@ require('kanagawa').setup({
             dragonBlack0 = "#0d0c0c",
             dragonBlack1 = "#12120f",
             dragonBlack2 = "#1D1C19",
-            dragonBlack3 = "#0f111a", -- Updated to match terminal theme
-            dragonBlack4 = "#0f111a", -- Updated to match terminal theme
+            -- dragonBlack3 = "#0f111a", -- Updated to match terminal theme
+            -- dragonBlack4 = "#0f111a", -- Updated to match terminal theme
+            dragonBlack3 = "#13151F", -- Updated to match terminal theme
+            dragonBlack4 = "#13151F", -- Updated to match terminal theme
             dragonBlack5 = "#393836",
             dragonBlack6 = "#625e5a",
         },
         theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
     },
-    overrides = function(colors) -- add/modify highlights
+    overrides = function()
         return {}
     end,
     theme = "dragon",

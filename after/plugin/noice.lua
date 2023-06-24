@@ -1,3 +1,7 @@
+-- 
+-- noice is a UI library, the one that enables us to have the command line at bottom floating, and nice looking messages
+-- The routes map is where I can disable certain messages, like for example  "14B written" message
+-- 
 require("noice").setup({
     routes = {
         -- Disable some usesless messages such as "5 lines yanked" & "5B written"
@@ -11,6 +15,8 @@ require("noice").setup({
         { filter = { find = "under cursor" }, opts = { stop = true }, },
         { filter = { find = "no manual entry" }, opts = { stop = true }, },
     },
+    popupmenu = { enabled = false, },
+    messages = { enabled = false, },
     cmdline = {
         enabled = true,
         view = "cmdline_popup",

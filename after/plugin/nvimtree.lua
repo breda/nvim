@@ -1,3 +1,7 @@
+-- 
+-- File tree
+-- 
+
 -- Bellow config is taken from https://github.com/reyhankaplan/dotfiles/blob/master/.config/nvim/plugin/packages/nvim_tree.lua
 local nvim_tree = require('nvim-tree')
 
@@ -37,7 +41,8 @@ end
 -- Setup nvim_tree
 nvim_tree.setup({
   update_focused_file = { enable = true },
-  auto_reload_on_write = true,
+  auto_reload_on_write = false,
+  reload_on_bufenter = true,
   hijack_cursor = true,
   on_attach = on_attach,
 

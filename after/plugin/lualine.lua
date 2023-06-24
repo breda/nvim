@@ -1,3 +1,8 @@
+-- 
+-- Lualine is the line you see at the top, that shows the mode, filename... etc
+-- 
+
+
 -- Bubbles config for lualine
 -- Author: lokesh-krishna
 -- MIT license, see LICENSE for more details.
@@ -74,9 +79,9 @@ require('lualine').setup {
     lualine_a = {
       { 'mode', separator = { left = '' }, right_padding = 2 },
     },
-    lualine_b = {'buffers'},
+    lualine_b = {'filename'},
     lualine_c = {},
-    lualine_x = {'tabnine'},
+    lualine_x = {},
     lualine_y = {'branch', 'diff'},
     lualine_z = {'filetype', 'encoding'},
   },

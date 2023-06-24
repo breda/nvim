@@ -1,3 +1,6 @@
+-- 
+-- cmd is the autocompletion engine 
+-- 
 local has_words_before = function()
   unpack = unpack or table.unpack
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -42,6 +45,5 @@ cmp.setup({
       { name = "path" },
       { name = "buffer", keyword_length = 2 },
       { name = "tmux" },
-      { name = 'cmp_tabnine' },
     },
 })

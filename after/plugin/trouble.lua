@@ -1,6 +1,4 @@
-local r = "r"
-
-
-require('trouble').setup({
-
-})
+-- 
+-- LSP messages inside the editor
+-- 
+require('trouble').setup()
