@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -127,6 +132,11 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
   ["focus.nvim"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/focus.nvim",
@@ -162,11 +172,6 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/hardtime.nvim",
     url = "https://github.com/m4xshen/hardtime.nvim"
   },
-  harpoon = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/harpoon",
-    url = "https://github.com/ThePrimeagen/harpoon"
-  },
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
@@ -197,25 +202,10 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["memento.nvim"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/memento.nvim",
-    url = "https://github.com/gaborvecsei/memento.nvim"
-  },
-  ["mini.base16"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/mini.base16",
-    url = "https://github.com/echasnovski/mini.base16"
-  },
   ["mkdir.nvim"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/mkdir.nvim",
     url = "https://github.com/jghauser/mkdir.nvim"
-  },
-  neogen = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/neogen",
-    url = "https://github.com/danymat/neogen"
   },
   ["neoscroll.nvim"] = {
     loaded = true,
@@ -242,16 +232,6 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-go"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
-    url = "https://github.com/leoluz/nvim-dap-go"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -261,11 +241,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-notify",
     url = "https://github.com/rcarriga/nvim-notify"
-  },
-  ["nvim-smartbufs"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-smartbufs",
-    url = "https://github.com/johann2357/nvim-smartbufs"
   },
   ["nvim-surround"] = {
     loaded = true,
@@ -312,11 +287,6 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["reach.nvim"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/reach.nvim",
-    url = "https://github.com/toppair/reach.nvim"
-  },
   ["telescope-undo.nvim"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/telescope-undo.nvim",
@@ -337,25 +307,10 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
     url = "https://github.com/Pocco81/true-zen.nvim"
   },
-  ["twilight.nvim"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/twilight.nvim",
-    url = "https://github.com/folke/twilight.nvim"
-  },
   undotree = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-be-good"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/vim-be-good",
-    url = "https://github.com/ThePrimeagen/vim-be-good"
-  },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-obsession"] = {
     loaded = true,

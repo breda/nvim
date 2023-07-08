@@ -21,11 +21,20 @@ null_ls.setup({
         end
     end,
     sources = {
+        -- PHP
         null_ls.builtins.formatting.phpcsfixer.with({
             extra_args = {'--allow-risky=yes'},
             env = {
                 PHP_CS_FIXER_IGNORE_ENV = '1',
             }
         }),
+
+        -- Ruff is a python linter
+        null_ls.builtins.diagnostics.ruff,
+        -- Black is a python formatter
+        null_ls.builtins.formatting.black,
+
+        -- Lua formatting
+        null_ls.builtins.formatting.stylua,
     },
 })
