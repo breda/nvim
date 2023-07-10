@@ -12,6 +12,18 @@ api.nvim_create_autocmd({ "VimLeave" }, {
 	end,
 })
 
+-- Autoclose the file tree after opening a buffer
+api.nvim_create_autocmd({ "BufEnter" }, {
+	group = acgroup("buf_enter"),
+	callback = function(event)
+		if string.find(event.match, "NvimTree") == nil then
+			vim.defer_fn(function()
+				vim.cmd([[NvimTreeClose]])
+			end, 3000)
+		end
+	end,
+})
+
 --
 -- The 3 next autocmds are copied from:
 -- https://github.com/2KAbhishek/nvim2k
