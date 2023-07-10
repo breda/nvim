@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
+  ["cmp-async-path"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/cmp-async-path",
+    url = "https://github.com/FelipeLema/cmp-async-path"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -108,11 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
     url = "https://github.com/hrsh7th/cmp-nvim-lua"
-  },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
   },
   ["cmp-tmux"] = {
     loaded = true,
@@ -171,6 +171,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/hardtime.nvim",
     url = "https://github.com/m4xshen/hardtime.nvim"
+  },
+  harpoon = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
   },
   ["kanagawa.nvim"] = {
     loaded = true,

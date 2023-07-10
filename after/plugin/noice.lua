@@ -14,6 +14,7 @@ require("noice").setup({
 		{ filter = { find = "under cursor" }, opts = { stop = true } },
 		{ filter = { find = "no manual entry" }, opts = { stop = true } },
 	},
+
 	popupmenu = { enabled = true },
 	messages = { enabled = true },
 	cmdline = {
@@ -21,14 +22,14 @@ require("noice").setup({
 		view = "cmdline",
 		opts = {
 			position = {
-				row = "96%",
+				row = "98%",
 				col = "50%",
 			},
 			size = {
 				width = "35%",
 			},
 			border = {
-				style = "single",
+				style = "none",
 				text = {
 					top = "",
 					top_align = "left",

@@ -32,8 +32,10 @@ require("gitsigns").setup({
 		border = "single",
 		style = "minimal",
 		relative = "cursor",
-		row = 0,
-		col = 1,
+		focusable = true,
+		width = 200,
+		row = 1,
+		col = 100,
 	},
 	yadm = {
 		enable = false,

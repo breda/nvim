@@ -1,4 +1,4 @@
--- 
+--
 -- File name says everything
--- 
-require('guess-indent').setup({})
+--
+require("guess-indent").setup({})

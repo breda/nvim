@@ -42,7 +42,8 @@ cmp.setup({
 	},
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "path" },
+		{ name = "nvim_lua" },
+		{ name = "async_path" },
 		{ name = "buffer", keyword_length = 2 },
 		{ name = "tmux" },
 	},

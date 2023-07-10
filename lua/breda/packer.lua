@@ -64,9 +64,6 @@ return require("packer").startup(function(use)
 	-- Distraction free
 	use("Pocco81/true-zen.nvim")
 
-	-- Smooth scrolling
-	use("karb94/neoscroll.nvim")
-
 	------------------------------------------------------------------------------------------------------------------------------------------------------
 	---- Editor ------------------------------------------------------------------------------------------------------------------------------------------
 	------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -112,9 +109,9 @@ return require("packer").startup(function(use)
 			-- Autocompletion sources
 			{ "hrsh7th/nvim-cmp" },
 			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
 			{ "hrsh7th/cmp-nvim-lsp" },
 			{ "hrsh7th/cmp-nvim-lua" },
+			{ "FelipeLema/cmp-async-path" },
 			{ "andersevenrud/cmp-tmux" },
 
 			-- Snippets

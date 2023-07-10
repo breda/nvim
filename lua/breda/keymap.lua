@@ -2,6 +2,7 @@ local telescope = require("telescope.builtin")
 local telescopeUndo = require("telescope").extensions.undo
 local harpoon = require("harpoon.ui")
 local theme = require("kanagawa")
+local gs = require("gitsigns")
 
 local lsp = vim.lsp
 local cmd = vim.cmd
@@ -53,6 +54,48 @@ return {
 		opts = {},
 	},
 
+	-----------------------------
+	-- Git
+	-----------------------------
+	{
+		description = "Git: Blame line",
+		modes = "n",
+		keys = "<leader>gb",
+		run = gs.toggle_current_line_blame,
+		opts = {},
+	},
+	{
+		description = "Git: Blame file",
+		modes = "n",
+		keys = "<leader>gB",
+		run = function()
+			gs.blame_line({ full = true })
+		end,
+		opts = {},
+	},
+	{
+		description = "Git: Diff section/line",
+		modes = "n",
+		keys = "<leader>gf",
+		run = gs.preview_hunk,
+		opts = {},
+	},
+	{
+		description = "Git: Diff file",
+		modes = "n",
+		keys = "<leader>gF",
+		run = function()
+			gs.diffthis("~")
+		end,
+		opts = {},
+	},
+	{
+		description = "Git: Toggle Deleted",
+		modes = "n",
+		keys = "<leader>gd",
+		run = gs.toggle_deleted,
+		opts = {},
+	},
 	-- -----------------------------
 	-- -- Debugging
 	-- -----------------------------

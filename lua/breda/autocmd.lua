@@ -4,7 +4,10 @@ local function acgroup(name)
 	return api.nvim_create_augroup("breda__" .. name, { clear = true })
 end
 
--- Start tracking Vim session as soon as we leave
+------------------------------------------------------------------------------------------------------------------------------------------------------
+---- Personal ----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Start tracking Vim session as soon as we leave vim
 api.nvim_create_autocmd({ "VimLeave" }, {
 	group = acgroup("leave"),
 	callback = function()
@@ -24,31 +27,9 @@ api.nvim_create_autocmd({ "VimLeave" }, {
 -- 	end,
 -- })
 
--- -- Set the current lsp when entring a buffer
--- api.nvim_create_autocmd({ "BufEnter" }, {
--- 	group = acgroup("buf_enter"),
--- 	callback = function()
--- 		local clients = vim.lsp.get_active_clients()
--- 		for _, client in pairs(clients) do
--- 			if client.name ~= "null-ls" then
--- 				CurrentLsp = client.name
--- 			end
--- 		end
--- 	end,
--- })
---
---
---
--- The 3 next autocmds are copied from:
--- https://github.com/2KAbhishek/nvim2k
---
--- resize splits if window got resized
-api.nvim_create_autocmd({ "VimResized" }, {
-	group = acgroup("resize_splits"),
-	callback = function()
-		vim.cmd("tabdo wincmd =")
-	end,
-})
+------------------------------------------------------------------------------------------------------------------------------------------------------
+---- Copied ------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- close some filetypes with <q>
 api.nvim_create_autocmd("FileType", {

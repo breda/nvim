@@ -1,6 +1,6 @@
--- 
+--
 -- true-zen enables focusing on some splits, and also the all amazing zen mode (aka distraction free)
--- 
+--
 require("true-zen").setup({
 	modes = { -- configurations per mode
 		ataraxis = {
@@ -21,7 +21,7 @@ require("true-zen").setup({
 				open_pre = nil,
 				open_pos = nil,
 				close_pre = nil,
-				close_pos = nil
+				close_pos = nil,
 			},
 		},
 		minimalist = {
@@ -37,13 +37,13 @@ require("true-zen").setup({
 				showcmd = false,
 				showmode = false,
 				ruler = false,
-				numberwidth = 1
+				numberwidth = 1,
 			},
 			callbacks = { -- run functions when opening/closing Minimalist mode
 				open_pre = nil,
 				open_pos = nil,
 				close_pre = nil,
-				close_pos = nil
+				close_pos = nil,
 			},
 		},
 		narrow = {
@@ -57,7 +57,7 @@ require("true-zen").setup({
 				open_pre = nil,
 				open_pos = nil,
 				close_pre = nil,
-				close_pos = nil
+				close_pos = nil,
 			},
 		},
 		focus = {
@@ -65,17 +65,17 @@ require("true-zen").setup({
 				open_pre = nil,
 				open_pos = nil,
 				close_pre = nil,
-				close_pos = nil
+				close_pos = nil,
 			},
-		}
+		},
 	},
 	integrations = {
 		tmux = true,
 		kitty = {
 			enabled = true,
-			font = "+5"
+			font = "+5",
 		},
 		twilight = false, -- enable twilight (ataraxis)
-		lualine = false -- hide nvim-lualine (ataraxis)
+		lualine = false, -- hide nvim-lualine (ataraxis)
 	},
 })
