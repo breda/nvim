@@ -66,6 +66,20 @@ local theme = {
 	},
 }
 
+function GetCurrentLsp()
+	local clients = vim.lsp.get_active_clients()
+
+	if next(clients) == nil then
+		return "No LSP"
+	end
+
+	for _, client in pairs(clients) do
+		if client.name ~= "null-ls" then
+			return client.name
+		end
+	end
+end
+
 require("lualine").setup({
 	options = {
 		theme = "catppuccin",
@@ -83,7 +97,7 @@ require("lualine").setup({
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = { "branch", "diff" },
-		lualine_z = { "filetype", "encoding" },
+		lualine_z = { "GetCurrentLsp()", "encoding" },
 	},
 	extensions = {},
 })

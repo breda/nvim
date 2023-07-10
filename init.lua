@@ -5,4 +5,3 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Load local config
 require("breda")
-

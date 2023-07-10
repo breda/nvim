@@ -1,5 +1,6 @@
 local telescope = require("telescope.builtin")
 local telescopeUndo = require("telescope").extensions.undo
+local harpoon = require("harpoon.ui")
 local theme = require("kanagawa")
 
 local lsp = vim.lsp
@@ -242,20 +243,11 @@ return {
 	-- Buffer management
 	-----------------------------
 	{
-		description = "Close current buffer",
-		modes = "n",
-		keys = "<leader>x",
-		run = function()
-			smartbufs.close_current_buffer()
-		end,
-		opts = {},
-	},
-	{
 		description = "Select buffer 1",
 		modes = "n",
 		keys = "<leader>1",
 		run = function()
-			smartbufs.goto_buffer(1)
+			harpoon.nav_file(1)
 		end,
 		opts = {},
 	},
@@ -264,7 +256,7 @@ return {
 		modes = "n",
 		keys = "<leader>2",
 		run = function()
-			smartbufs.goto_buffer(2)
+			harpoon.nav_file(2)
 		end,
 		opts = {},
 	},
@@ -273,7 +265,7 @@ return {
 		modes = "n",
 		keys = "<leader>3",
 		run = function()
-			smartbufs.goto_buffer(3)
+			harpoon.nav_file(3)
 		end,
 		opts = {},
 	},
@@ -282,7 +274,7 @@ return {
 		modes = "n",
 		keys = "<leader>4",
 		run = function()
-			smartbufs.goto_buffer(4)
+			harpoon.nav_file(4)
 		end,
 		opts = {},
 	},
@@ -291,61 +283,53 @@ return {
 		modes = "n",
 		keys = "<leader>5",
 		run = function()
-			smartbufs.goto_buffer(5)
+			harpoon.nav_file(5)
 		end,
 		opts = {},
 	},
 	{
-		description = "Select buffer 6",
+		description = "Harpoon: mark",
 		modes = "n",
-		keys = "<leader>6",
+		keys = "<leader>hm",
 		run = function()
-			smartbufs.goto_buffer(6)
+			require("harpoon.mark").add_file()
 		end,
 		opts = {},
 	},
 	{
-		description = "Select buffer 7",
+		description = "Harpoon: menu",
 		modes = "n",
-		keys = "<leader>7",
+		keys = "<leader>hh",
 		run = function()
-			smartbufs.goto_buffer(7)
+			harpoon.toggle_quick_menu()
 		end,
 		opts = {},
 	},
 	{
-		description = "Select buffer 8",
+		description = "Harpoon: next",
 		modes = "n",
-		keys = "<leader>8",
+		keys = "<leader>hn",
 		run = function()
-			smartbufs.goto_buffer(8)
+			harpoon.nav_next()
+		end,
+		opts = {},
+	},
+
+	{
+		description = "Harpoon: prev",
+		modes = "n",
+		keys = "<leader>hN",
+		run = function()
+			harpoon.nav_prev()
 		end,
 		opts = {},
 	},
 	{
-		description = "Select buffer 9",
+		description = "Harpoon: menu",
 		modes = "n",
-		keys = "<leader>9",
+		keys = "<leader>hh",
 		run = function()
-			smartbufs.goto_buffer(9)
-		end,
-		opts = {},
-	},
-	{
-		description = "Buffers quick switch",
-		modes = "n",
-		keys = "<leader>b",
-		run = function()
-			reach.buffers(reachOpts)
-		end,
-		opts = {},
-	},
-	{
-		description = "Marks quick switch",
-		modes = "n",
-		keys = "<leader>m",
-		run = function()
-			reach.marks(reachOpts)
+			harpoon.toggle_quick_menu()
 		end,
 		opts = {},
 	},

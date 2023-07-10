@@ -7,6 +7,7 @@ local lsp = require("lsp-zero")
 require("lspkind").init({
 	mode = "symbol_text",
 })
+
 -- For now, just running the recommended
 lsp.preset("recommended")
 lsp.ensure_installed({

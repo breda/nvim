@@ -6,6 +6,9 @@ return require("packer").startup(function(use)
 	------------------------------------------------------------------------------------------------------------------------------------------------------
 	use("wbthomason/packer.nvim")
 
+	-- Plenary
+	use("nvim-lua/plenary.nvim")
+
 	-- Treesitter
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
@@ -81,6 +84,9 @@ return require("packer").startup(function(use)
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
+
+	-- Harpoon
+	use("ThePrimeagen/harpoon")
 
 	------------------------------------------------------------------------------------------------------------------------------------------------------
 	---- Utils -------------------------------------------------------------------------------------------------------------------------------------------
