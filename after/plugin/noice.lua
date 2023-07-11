@@ -13,6 +13,7 @@ require("noice").setup({
 		{ filter = { find = "more line" }, opts = { stop = true } },
 		{ filter = { find = "under cursor" }, opts = { stop = true } },
 		{ filter = { find = "no manual entry" }, opts = { stop = true } },
+		{ filter = { find = "formatting" }, opts = { stop = true } },
 	},
 
 	popupmenu = { enabled = true },
