@@ -22,7 +22,7 @@ null_ls.setup({
 	end,
 	sources = {
 		-- PHP
-		null_ls.builtins.diagnostics.phpstan,
+		-- null_ls.builtins.diagnostics.phpstan,
 		null_ls.builtins.formatting.phpcsfixer.with({
 			extra_args = { "--allow-risky=yes" },
 			env = {

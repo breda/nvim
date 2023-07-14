@@ -6,6 +6,7 @@ require("noice").setup({
 	routes = {
 		{ filter = { find = "No information available" }, opts = { stop = true } },
 		{ filter = { find = "fewer lines" }, opts = { stop = true } },
+		{ filter = { find = "line less" }, opts = { stop = true } },
 		{ filter = { find = "more lines" }, opts = { stop = true } },
 		{ filter = { find = "written" }, opts = { stop = true } },
 		{ filter = { find = "change" }, opts = { stop = true } },
