@@ -2,6 +2,7 @@ local telescope = require("telescope.builtin")
 local telescopeUndo = require("telescope").extensions.undo
 local harpoon = require("harpoon.ui")
 local theme = require("kanagawa")
+local dap = require("dap")
 local gs = require("gitsigns")
 
 local lsp = vim.lsp
@@ -99,35 +100,35 @@ return {
 	-- -----------------------------
 	-- -- Debugging
 	-- -----------------------------
-	-- {
-	-- 	description = "Debugger: Add breakpoint",
-	-- 	modes = "n",
-	-- 	keys = "<leader>db",
-	-- 	run = dap.toggle_breakpoint,
-	-- 	opts = {},
-	-- },
-	-- {
-	-- 	description = "Debugger: Continue",
-	-- 	modes = "n",
-	-- 	keys = "<leader>dc",
-	-- 	run = dap.continue,
-	-- 	opts = {},
-	-- },
-	-- {
-	-- 	description = "Debugger: Step through code",
-	-- 	modes = "n",
-	-- 	keys = "<leader>ds",
-	-- 	run = dap.step_into,
-	-- 	opts = {},
-	-- },
-	-- {
-	-- 	description = "Debugger: Launch REPL",
-	-- 	modes = "n",
-	-- 	keys = "<leader>dr",
-	-- 	run = dap.repl.open,
-	-- 	opts = {},
-	-- },
-	--
+	{
+		description = "Debugger: Add breakpoint",
+		modes = "n",
+		keys = "<leader>db",
+		run = dap.toggle_breakpoint,
+		opts = {},
+	},
+	{
+		description = "Debugger: Continue",
+		modes = "n",
+		keys = "<leader>dc",
+		run = dap.continue,
+		opts = {},
+	},
+	{
+		description = "Debugger: Step through code",
+		modes = "n",
+		keys = "<leader>ds",
+		run = dap.step_into,
+		opts = {},
+	},
+	{
+		description = "Debugger: Launch REPL",
+		modes = "n",
+		keys = "<leader>dr",
+		run = dap.repl.open,
+		opts = {},
+	},
+
 	-----------------------------
 	-- Git
 	-----------------------------

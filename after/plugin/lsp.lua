@@ -74,14 +74,3 @@ lspconfig.pyright.setup({})
 
 lsp.nvim_workspace()
 lsp.setup()
-
--- Configure autocompletion
-local cmp = require("cmp")
-local cmp_action = lsp.cmp_action()
-
-cmp.setup({
-	mapping = {
-		["<CR>"] = cmp.mapping.confirm({ select = true }),
-		["<Tab>"] = cmp_action.tab_complete(),
-	},
-})

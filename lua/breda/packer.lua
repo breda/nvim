@@ -78,6 +78,7 @@ return require("packer").startup(function(use)
 	-- Comments and toggling stuff
 	use("numToStr/Comment.nvim")
 	use({ "nguyenvukhang/nvim-toggler" })
+	use({ "saifulapm/chartoggle.nvim" })
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
@@ -139,4 +140,10 @@ return require("packer").startup(function(use)
 
 	-- Go
 	use("ray-x/go.nvim")
+
+	------------------------------------------------------------------------------------------------------------------------------------------------------
+	---- DAP ---------------------------------------------------------------------------------------------------------------------------------------------
+	------------------------------------------------------------------------------------------------------------------------------------------------------
+	use("mfussenegger/nvim-dap")
+	use("rcarriga/nvim-dap-ui")
 end)
