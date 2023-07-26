@@ -54,6 +54,13 @@ return {
 		run = telescope.jumplist,
 		opts = {},
 	},
+	{
+		description = "Search TODO comments",
+		modes = "n",
+		keys = "<leader>st",
+		run = cmd.TodoTelescope,
+		opts = {},
+	},
 
 	-----------------------------
 	-- Git
@@ -126,6 +133,13 @@ return {
 		modes = "n",
 		keys = "<leader>dr",
 		run = dap.repl.open,
+		opts = {},
+	},
+	{
+		description = "Debugger: Open UI",
+		modes = "n",
+		keys = "<leader>dt",
+		run = require("dapui").toggle,
 		opts = {},
 	},
 
@@ -541,6 +555,13 @@ return {
 		run = cmd.GoAddTag,
 		opts = {},
 	},
+	{
+		description = "Go: Fill struct",
+		modes = "n",
+		keys = "<leader>gf",
+		run = cmd.GoFillStruct,
+		opts = {},
+	},
 
 	-- Tests
 	{
@@ -613,6 +634,24 @@ return {
 		modes = "n",
 		keys = "<leader>mr",
 		run = ":source ~/.config/nvim/init.lua<CR>",
+		opts = {},
+	},
+
+	-----------------------------
+	-- Remaps
+	-----------------------------
+	{
+		description = "Center screen when vertical scrolling",
+		modes = "n",
+		keys = "<C-d>",
+		run = "15jzz",
+		opts = {},
+	},
+	{
+		description = "Center screen when vertical scrolling",
+		modes = "n",
+		keys = "<C-u>",
+		run = "15kzz",
 		opts = {},
 	},
 
