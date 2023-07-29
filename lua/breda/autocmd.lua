@@ -43,6 +43,7 @@ api.nvim_create_autocmd("FileType", {
 		"dap-repl",
 		"copilot.go",
 		"qf",
+		"oil",
 	},
 	callback = function(event)
 		vim.bo[event.buf].buflisted = false
