@@ -37,12 +37,11 @@ return require("packer").startup(function(use)
 	-- Improvements
 	use({ "folke/noice.nvim", requires = { "MunifTanjim/nui.nvim" } })
 	use("stevearc/dressing.nvim")
-	use("rcarriga/nvim-notify")
 
 	-- File tree
 	use("nvim-tree/nvim-web-devicons")
 	use("nvim-tree/nvim-tree.lua")
-	use("jghauser/mkdir.nvim")
+	use("jghauser/mkdir.vim")
 	use("stevearc/oil.nvim")
 
 	-- Dashboard (at startup)
