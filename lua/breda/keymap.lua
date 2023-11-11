@@ -122,10 +122,24 @@ return {
 		opts = {},
 	},
 	{
-		description = "Debugger: Step through code",
+		description = "Debugger: Step over",
 		modes = "n",
-		keys = "<leader>ds",
+		keys = "<leader>dj",
+		run = dap.step_over,
+		opts = {},
+	},
+	{
+		description = "Debugger: Step into",
+		modes = "n",
+		keys = "<leader>di",
 		run = dap.step_into,
+		opts = {},
+	},
+	{
+		description = "Debugger: Step out",
+		modes = "n",
+		keys = "<leader>do",
+		run = dap.step_out,
 		opts = {},
 	},
 	{

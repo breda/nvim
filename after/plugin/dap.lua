@@ -4,6 +4,7 @@ local dap, dapui = require("dap"), require("dapui")
 dapui.setup()
 
 -- Adapters
+-- Go
 dap.adapters.delve = {
 	type = "server",
 	port = "${port}",
@@ -11,6 +12,13 @@ dap.adapters.delve = {
 		command = "dlv",
 		args = { "dap", "-l", "127.0.0.1:${port}" },
 	},
+}
+
+-- PHP
+dap.adapters.php = {
+	type = "executable",
+	command = "node",
+	args = { "/home/breda/.vscode-php-debug/out/phpDebug.js" },
 }
 
 -- Config
@@ -36,5 +44,15 @@ dap.configurations.go = {
 		request = "launch",
 		mode = "test",
 		program = "./${relativeFileDirname}",
+	},
+}
+
+-- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#php
+dap.configurations.php = {
+	{
+		type = "php",
+		request = "launch",
+		name = "Listen for Xdebug",
+		port = 9000,
 	},
 }
