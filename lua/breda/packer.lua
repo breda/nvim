@@ -56,6 +56,7 @@ return require("packer").startup(function(use)
 
 	-- Colorscheme
 	use("rebelot/kanagawa.nvim")
+	use("AlexvZyl/nordic.nvim")
 
 	-- Status bar
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })

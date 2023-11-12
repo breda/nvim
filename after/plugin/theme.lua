@@ -1,40 +1,54 @@
 --
 -- theme config (colorscheme)
 --
-require("kanagawa").setup({
-	compile = false, -- enable compiling the colorscheme
-	undercurl = true, -- enable undercurls
-	commentStyle = { italic = true },
-	functionStyle = {},
-	keywordStyle = { italic = true },
-	statementStyle = { bold = true },
-	typeStyle = {},
-	transparent = false, -- do not set background color
-	dimInactive = false, -- dim inactive window `:h hl-NormalNC`
-	terminalColors = true, -- define vim.g.terminal_color_{0,17}
-	colors = { -- add/modify theme and palette colors
-		palette = {
-			dragonBlack0 = "#0f111a",
-			dragonBlack1 = "#12120f",
-			dragonBlack2 = "#1D1C19",
-			-- dragonBlack3 = "#0f111a", -- Updated to match terminal theme
-			-- dragonBlack4 = "#0f111a", -- Updated to match terminal theme
-			dragonBlack3 = "#13151F", -- Updated to match terminal theme
-			dragonBlack4 = "#13151F", -- Updated to match terminal theme
-			dragonBlack5 = "#393836",
-			dragonBlack6 = "#625e5a",
-		},
-		theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
-	},
-	overrides = function()
-		return {}
+
+require("nordic").setup({
+	-- This callback can be used to override the colors used in the palette.
+	on_palette = function(palette)
+		return palette
 	end,
-	theme = "dragon",
-	background = {
-		dark = "dragon",
-		light = "lotus",
+	-- Enable bold keywords.
+	bold_keywords = false,
+	-- Enable italic comments.
+	italic_comments = true,
+	-- Enable general editor background transparency.
+	transparent_bg = false,
+	-- Enable brighter float border.
+	bright_border = false,
+	-- Reduce the overall amount of blue in the theme (diverges from base Nord).
+	reduced_blue = true,
+	-- Swap the dark background with the normal one.
+	swap_backgrounds = false,
+	-- Override the styling of any highlight group.
+	override = {},
+	-- Cursorline options.  Also includes visual/selection.
+	cursorline = {
+		-- Bold font in cursorline.
+		bold = false,
+		-- Bold cursorline number.
+		bold_number = false,
+		-- Avialable styles: 'dark', 'light'.
+		theme = "dark",
+		-- Blending the cursorline bg with the buffer bg.
+		blend = 0.7,
+	},
+	noice = {
+		-- Available styles: `classic`, `flat`.
+		style = "flat",
+	},
+	telescope = {
+		-- Available styles: `classic`, `flat`.
+		style = "flat",
+	},
+	leap = {
+		-- Dims the backdrop when using leap.
+		dim_backdrop = false,
+	},
+	ts_context = {
+		-- Enables dark background for treesitter-context window
+		dark_background = true,
 	},
 })
 
 -- setup must be called before loading
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme nordic")
