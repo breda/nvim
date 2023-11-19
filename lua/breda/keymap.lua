@@ -104,6 +104,21 @@ return {
 		run = gs.toggle_deleted,
 		opts = {},
 	},
+	{
+		description = "Git: Show buffer commits",
+		modes = "n",
+		keys = "<leader>gc",
+		run = telescope.git_bcommits,
+		opts = {},
+	},
+	{
+		description = "Git: Status",
+		modes = "n",
+		keys = "<leader>gs",
+		run = cmd.Git,
+		opts = {},
+	},
+
 	-- -----------------------------
 	-- -- Debugging
 	-- -----------------------------
@@ -154,24 +169,6 @@ return {
 		modes = "n",
 		keys = "<leader>dt",
 		run = require("dapui").toggle,
-		opts = {},
-	},
-
-	-----------------------------
-	-- Git
-	-----------------------------
-	{
-		description = "Git: Show buffer commits",
-		modes = "n",
-		keys = "<leader>gc",
-		run = telescope.git_bcommits,
-		opts = {},
-	},
-	{
-		description = "Git: Status",
-		modes = "n",
-		keys = "<leader>gs",
-		run = cmd.Git,
 		opts = {},
 	},
 
@@ -393,7 +390,6 @@ return {
 		end,
 		opts = {},
 	},
-
 	{
 		description = "Harpoon: prev",
 		modes = "n",
@@ -569,21 +565,21 @@ return {
 	},
 
 	-- Go
-	{
-		description = "Go: Add struct tags",
-		modes = "n",
-		keys = "<leader>gt",
-		run = cmd.GoAddTag,
-		opts = {},
-	},
-	{
-		description = "Go: Fill struct",
-		modes = "n",
-		keys = "<leader>gf",
-		run = cmd.GoFillStruct,
-		opts = {},
-	},
-
+	-- {
+	-- 	description = "Go: Add struct tags",
+	-- 	modes = "n",
+	-- 	keys = "<leader>gt",
+	-- 	run = cmd.GoAddTag,
+	-- 	opts = {},
+	-- },
+	-- {
+	-- 	description = "Go: Fill struct",
+	-- 	modes = "n",
+	-- 	keys = "<leader>gf",
+	-- 	run = cmd.GoFillStruct,
+	-- 	opts = {},
+	-- },
+	--
 	-- Tests
 	{
 		description = "Run test: latest",

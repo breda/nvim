@@ -39,7 +39,7 @@ end
 
 -- Setup nvim_tree
 nvim_tree.setup({
-	update_focused_file = { enable = true },
+	update_focused_file = { enable = false },
 	auto_reload_on_write = false,
 	reload_on_bufenter = true,
 	hijack_cursor = true,
@@ -48,7 +48,6 @@ nvim_tree.setup({
 	-- View
 	view = {
 		width = 40,
-		hide_root_folder = false,
 		side = "left",
 		preserve_window_proportions = true,
 		adaptive_size = false,
@@ -65,8 +64,8 @@ nvim_tree.setup({
 		indent_width = 2,
 		icons = {
 			show = {
-				file = true,
-				folder = true,
+				file = false,
+				folder = false,
 				folder_arrow = true,
 				git = false,
 				modified = false,

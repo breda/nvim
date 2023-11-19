@@ -8,14 +8,14 @@
 
 -- stylua: ignore
 local colors = {
-	default = '#21252e',
-	blue    = '#2980b9',
-	cyan    = '#79dac8',
-	black   = '#21252e',
-	white   = '#c6c6c6',
-	red     = '#ff5189',
-	violet  = '#d183e8',
-	grey    = '#303030',
+    default = '#21252e',
+    blue    = '#2980b9',
+    cyan    = '#79dac8',
+    black   = '#21252e',
+    white   = '#c6c6c6',
+    red     = '#ff5189',
+    violet  = '#d183e8',
+    grey    = '#303030',
 }
 
 local theme = {
@@ -90,7 +90,7 @@ require("lualine").setup({
 		lualine_a = {
 			{ "mode", separator = { left = "" }, right_padding = 2 },
 		},
-		lualine_b = { "filename" },
+		lualine_b = { "filename", "diagnostics" },
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = { "branch", "diff" },

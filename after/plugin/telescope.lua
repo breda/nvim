@@ -44,6 +44,7 @@ require("telescope").setup({
 				height = 0.5,
 			},
 		},
+
 		oldfiles = {
 			theme = "dropdown",
 			previewer = false,

@@ -34,15 +34,9 @@ return require("packer").startup(function(use)
 	------------------------------------------------------------------------------------------------------------------------------------------------------
 	---- UI ----------------------------------------------------------------------------------------------------------------------------------------------
 	------------------------------------------------------------------------------------------------------------------------------------------------------
-	-- Improvements
-	use({ "folke/noice.nvim", requires = { "MunifTanjim/nui.nvim" } })
-	use("stevearc/dressing.nvim")
-
 	-- File tree
 	use("nvim-tree/nvim-web-devicons")
 	use("nvim-tree/nvim-tree.lua")
-	use("jghauser/mkdir.vim")
-	use("stevearc/oil.nvim")
 
 	-- Dashboard (at startup)
 	use({
@@ -60,7 +54,6 @@ return require("packer").startup(function(use)
 
 	-- Status bar
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
-	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- Distraction free
 	use("Pocco81/true-zen.nvim")
@@ -79,7 +72,6 @@ return require("packer").startup(function(use)
 	-- Comments and toggling stuff
 	use("numToStr/Comment.nvim")
 	use("folke/todo-comments.nvim")
-	use({ "nguyenvukhang/nvim-toggler" })
 	use({ "saifulapm/chartoggle.nvim" })
 
 	-- Git
@@ -93,9 +85,6 @@ return require("packer").startup(function(use)
 	------------------------------------------------------------------------------------------------------------------------------------------------------
 	-- Markdown preview
 	use({ "ellisonleao/glow.nvim" })
-
-	-- Keep bad habits away
-	use("m4xshen/hardtime.nvim")
 
 	------------------------------------------------------------------------------------------------------------------------------------------------------
 	---- LSP Base ----------------------------------------------------------------------------------------------------------------------------------------

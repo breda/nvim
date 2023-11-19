@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/breda/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/breda/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/breda/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/breda/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/breda/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/breda/.cache/nvim/packer_hererocks/2.1.1699392533/share/lua/5.1/?.lua;/home/breda/.cache/nvim/packer_hererocks/2.1.1699392533/share/lua/5.1/?/init.lua;/home/breda/.cache/nvim/packer_hererocks/2.1.1699392533/lib/luarocks/rocks-5.1/?.lua;/home/breda/.cache/nvim/packer_hererocks/2.1.1699392533/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/breda/.cache/nvim/packer_hererocks/2.1.1699392533/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -88,11 +88,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
-  },
-  catppuccin = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
   },
   ["chartoggle.nvim"] = {
     loaded = true,
@@ -137,11 +132,6 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
-  ["dressing.nvim"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/dressing.nvim",
-    url = "https://github.com/stevearc/dressing.nvim"
-  },
   ["focus.nvim"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/focus.nvim",
@@ -171,11 +161,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/guess-indent.nvim",
     url = "https://github.com/nmac427/guess-indent.nvim"
-  },
-  ["hardtime.nvim"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/hardtime.nvim",
-    url = "https://github.com/m4xshen/hardtime.nvim"
   },
   harpoon = {
     loaded = true,
@@ -212,20 +197,10 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["mkdir.nvim"] = {
+  ["nordic.nvim"] = {
     loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/mkdir.nvim",
-    url = "https://github.com/jghauser/mkdir.nvim"
-  },
-  ["noice.nvim"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/noice.nvim",
-    url = "https://github.com/folke/noice.nvim"
-  },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    url = "https://github.com/AlexvZyl/nordic.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -257,20 +232,10 @@ _G.packer_plugins = {
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-notify"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-notify",
-    url = "https://github.com/rcarriga/nvim-notify"
-  },
   ["nvim-surround"] = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
-  },
-  ["nvim-toggler"] = {
-    loaded = true,
-    path = "/home/breda/.local/share/nvim/site/pack/packer/start/nvim-toggler",
-    url = "https://github.com/nguyenvukhang/nvim-toggler"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -316,6 +281,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/breda/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/breda/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,

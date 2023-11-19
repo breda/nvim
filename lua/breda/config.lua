@@ -21,7 +21,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 -- Turn off cmd & status line, using plugins for those
-vim.opt.cmdheight = 1
+vim.opt.cmdheight = 0
 vim.opt.laststatus = 0
 
 -- No line wrap please
