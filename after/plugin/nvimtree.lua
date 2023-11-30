@@ -8,7 +8,7 @@ local nvim_tree = require("nvim-tree")
 local function on_attach(bufnr)
 	local api = require("nvim-tree.api")
 	local function opts(desc)
-		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = false }
 	end
 
 	api.config.mappings.default_on_attach(bufnr)
@@ -40,9 +40,9 @@ end
 -- Setup nvim_tree
 nvim_tree.setup({
 	update_focused_file = { enable = false },
-	auto_reload_on_write = false,
+	auto_reload_on_write = true,
 	reload_on_bufenter = true,
-	hijack_cursor = true,
+	hijack_cursor = false,
 	on_attach = on_attach,
 
 	-- View

@@ -15,6 +15,16 @@ api.nvim_create_autocmd({ "VimLeave" }, {
 	end,
 })
 
+-- Clear cmdline after a buffer write to get rid of the persisting "67B written" message
+api.nvim_create_autocmd({ "BufWritePost" }, {
+	group = acgroup("buf_write_post"),
+	callback = function(event)
+		vim.defer_fn(function()
+			vim.notify("")
+		end, 2000)
+	end,
+})
+
 -- -- Autoclose the file tree after opening a buffer
 -- api.nvim_create_autocmd({ "BufEnter" }, {
 -- 	group = acgroup("buf_enter"),

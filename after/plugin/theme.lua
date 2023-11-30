@@ -2,6 +2,8 @@
 -- theme config (colorscheme)
 --
 
+local palette = require("nordic.colors")
+
 require("nordic").setup({
 	-- This callback can be used to override the colors used in the palette.
 	on_palette = function(palette)
@@ -30,7 +32,7 @@ require("nordic").setup({
 		-- Avialable styles: 'dark', 'light'.
 		theme = "dark",
 		-- Blending the cursorline bg with the buffer bg.
-		blend = 0.7,
+		blend = 0.4,
 	},
 	noice = {
 		-- Available styles: `classic`, `flat`.

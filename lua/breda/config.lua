@@ -20,9 +20,11 @@ vim.opt.expandtab = true
 -- Smart indenting
 vim.opt.smartindent = true
 
--- Turn off cmd & status line, using plugins for those
-vim.opt.cmdheight = 0
+-- Turn off cmd & status
+vim.opt.cmdheight = 1
 vim.opt.laststatus = 0
+vim.opt.showmode = false
+vim.opt.ruler = false
 
 -- No line wrap please
 vim.opt.wrap = false
@@ -36,9 +38,6 @@ vim.opt.undofile = true
 -- Just awesome
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-
--- Colors
-vim.opt.termguicolors = true
 
 -- Scrolling goodness
 vim.opt.scrolloff = 12
