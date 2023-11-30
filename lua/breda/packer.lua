@@ -51,6 +51,7 @@ return require("packer").startup(function(use)
 	-- Colorscheme
 	use("rebelot/kanagawa.nvim")
 	use("AlexvZyl/nordic.nvim")
+	use("sunjon/shade.nvim")
 
 	-- Status bar
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
@@ -122,7 +123,7 @@ return require("packer").startup(function(use)
 	use("folke/trouble.nvim")
 
 	-- A must have
-	use("jose-elias-alvarez/null-ls.nvim")
+	use("nvimtools/none-ls.nvim")
 
 	-- PHP
 	use("phpactor/phpactor")
@@ -138,4 +139,5 @@ return require("packer").startup(function(use)
 	use("mfussenegger/nvim-dap")
 	use("rcarriga/nvim-dap-ui")
 	use("leoluz/nvim-dap-go")
+	use("theHamsta/nvim-dap-virtual-text")
 end)

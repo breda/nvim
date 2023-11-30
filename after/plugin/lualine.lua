@@ -90,7 +90,7 @@ require("lualine").setup({
 		lualine_a = {
 			{ "mode", separator = { left = "" }, right_padding = 2 },
 		},
-		lualine_b = { "filename", "diagnostics" },
+		lualine_b = { "filename" },
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = { "branch", "diff" },

@@ -15,14 +15,14 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					vim.lsp.buf.format({ async = false })
+					vim.lsp.buf.format({ async = true })
 				end,
 			})
 		end
 	end,
 	sources = {
 		-- PHP
-		-- null_ls.builtins.diagnostics.phpstan,
+		null_ls.builtins.diagnostics.phpstan,
 		null_ls.builtins.formatting.phpcsfixer.with({
 			extra_args = { "--allow-risky=yes" },
 			env = {
@@ -31,9 +31,9 @@ null_ls.setup({
 		}),
 
 		-- Ruff is a python linter
-		null_ls.builtins.diagnostics.ruff,
+		-- null_ls.builtins.diagnostics.ruff,
 		-- Black is a python formatter
-		null_ls.builtins.formatting.black,
+		-- null_ls.builtins.formatting.black,
 
 		-- Lua formatting
 		null_ls.builtins.formatting.stylua,

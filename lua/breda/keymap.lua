@@ -194,13 +194,6 @@ return {
 		run = cmd.NvimTreeFindFile,
 		opts = {},
 	},
-	{
-		description = "Open Oil",
-		modes = "n",
-		keys = "<leader>to",
-		run = require("oil").open,
-		opts = {},
-	},
 
 	-----------------------------
 	-- Motion and actions
